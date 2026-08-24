@@ -1,5 +1,5 @@
-## Harjoitus 2: DORA the Explora
-# Materiaalit:
+# Harjoitus 2: DORA the Explora
+## Materiaalit:
 DORA: Digital Operations Resilience Act
 - Sisältää vaatimuksia häiriönsietokyvyn testaukselle (digitaalisen toiminnan häiriönsietokyvyn perustason testaus ja uhkiin perustuva tunkeutumistestaus)
 - Auttaa yrityksia luomaan omia penetraatiotestejä
