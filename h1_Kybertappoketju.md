@@ -32,6 +32,9 @@ Aktiivinen tiedustelu:
     - NMAP (Yleisin porttsikannausohjelma)
     - Masscan (useille porteille)
 
+## Kali asennus
+Latasin itselleni Kali-imagen VirtualBox asennusta varten sivulta https://www.kali.org/get-kali/#kali-installer-images. Aluksi ihmettelin eri valintojen välillä, mutta päädyin normaaliin installer valintaan.
+
 ## Lähteet:
 Herrasmieshakkerit 2025: Tietomurron anatomia, vieraana Antti Kurittu. Kuunneltavissa: https://herrasmieshakkerit.fi/ Kuunneltu 23.8.2026
 
