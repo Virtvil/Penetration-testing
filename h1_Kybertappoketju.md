@@ -19,6 +19,19 @@ Tappoketju:
   6. Komentaminen ja kontrollointi (Command and Control (C2))
   7. Tavoitteisiin liittyvät toimenpiteet
 
+The Art of Hacking:
+Passiivnen tiedustelu:
+- Ei näy logeissa.
+- Kohdeympäristöön ei lähetetä ollenkaan paketteja.
+   
+Aktiivinen tiedustelu:
+- Ensimmäinen osa tappoketjua.
+- Näkyy logeissa.
+- Kohdeverkkoa käsitellään aktiivisesti, esimerkiksi porttiskannauksen muodossa.
+- Hyödyllisiä ohjelmia:
+    - NMAP (Yleisin porttsikannausohjelma)
+    - Masscan (useille porteille)
+
 ## Lähteet:
 Herrasmieshakkerit 2025: Tietomurron anatomia, vieraana Antti Kurittu. Kuunneltavissa: https://herrasmieshakkerit.fi/ Kuunneltu 23.8.2026
 
