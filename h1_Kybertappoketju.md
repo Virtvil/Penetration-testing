@@ -4,8 +4,9 @@
 Herrasmieshakkerit, Tietomurron anatomia:
 - Vähän turhan paljon mainontaa ja sponsorien etsintää jakson alkuun.
 - Mielenkiintoista keskustelua maksukorteista, maksukorttien turvakoodeista ja siitä kuinka sivustot päättävät itse kuinka arkaa tietoa tallentaa.
-- MIE (ei savoa, vaan Memory Integrity Enforcement) suojaa puhelimen muistia ylivuodolta.
-- Paljon keskustelua Vastaamon tietomurrosta, sekä tietomurtojen havaitsemisesta yrityksen sisällä (sekä kuinka havaitsemisen jälkeen edetään)
+- MIE (ei savoa, vaan Memory Integrity Enforcement), Applen uusien puhelimien suoja puhelimen muistin ylivuodolle ja tämän kautta muistiin käsiksi pääsemiselle.
+- Paljon keskustelua Vastaamon tietomurrosta, sekä tietomurtojen havaitsemisesta yrityksen sisällä (sekä kuinka havaitsemisen jälkeen edetään).
+- Erittäin mielenkiintoinen podcast, pidin varsinkin Antti Kurittun uratarinoista.
 
 Tappoketju:
 - Järjestelmällinen prosessi, jonka avulla haluttuun kohteeseen vaikutetaan haluttujen tavoitteiden aikaansaamiseksi.
