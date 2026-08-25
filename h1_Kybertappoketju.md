@@ -86,7 +86,7 @@ Tehtävän ideana oli murtautua "Orion"-palvelua pyörittävälle koneelle ja na
 
 <img width="1526" height="201" alt="Näyttökuva 2026-08-25 233219" src="https://github.com/user-attachments/assets/e881f0a0-4811-4163-a4b6-12bbc4cba396" />
 
-
+Saatuani tämän _"Very Easy"_ koneen suoritettuani, huomasinkin tehtävän ehdottavan HUOMATTAVASTI helpompia _Starting Point_ koneita... Hups...
 
 ## Lähteet:
 Brandistone Nyabonyi Mabeya Orion HTB Luettavissa: https://medium.com/@brandynyabonyi/orion-htb-42ad8ad1c374 Luettu 25.8.2026
