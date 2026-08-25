@@ -79,10 +79,18 @@ Seuraavaksi poistuin skannauksesta ja suljin VPN-yhteyden, jonka jälkeen asensi
 
 <img width="647" height="529" alt="VirtualBox_Kali_25_08_2026_22_02_31" src="https://github.com/user-attachments/assets/41916f9d-1b60-4c02-85c9-3f2c57e5eba9" />
 
+## Orion
+Lähdin ratkaisemaan Hack The Boxin tarjoamia "helppoja" koneita. En kuitenkaan tässä vaiheessa osannut oikeastaan mitään muuta kuin skannata tämän toisen koneen joten lähdinkin hakemaan itselleni verkosta apua! Sivuston virallinen writeup oli mielestäni sekava ja hyppäsi erittäin syvään päätyyn, käyttäen ohjelmia joista en ollut edes kuullut, joten lähdinkin itse tutkimaan mahdollisia muita hyödyllisiä lähteitä. Tällöin törmäsinkin Brandistone Nyabonyi Mabeyan erittäin hyödylliseen writeuppiin jota seuraten sainkin tehtävän suoritettua onnistuneesti!
+
+Tehtävän ideana oli murtautua "Orion"-palvelua pyörittävälle koneelle ja napata tämän admin-käyttäjältä (Adam) lippu, sekä telnet-sovelluksen kautta laitteen root-kansiosta toinen lippu.
+
+<img width="1526" height="201" alt="Näyttökuva 2026-08-25 233219" src="https://github.com/user-attachments/assets/e881f0a0-4811-4163-a4b6-12bbc4cba396" />
 
 
 
 ## Lähteet:
+Brandistone Nyabonyi Mabeya Orion HTB Luettavissa: https://medium.com/@brandynyabonyi/orion-htb-42ad8ad1c374 Luettu 25.8.2026
+
 Herrasmieshakkerit 2025: Tietomurron anatomia, vieraana Antti Kurittu. Kuunneltavissa: https://herrasmieshakkerit.fi/ Kuunneltu 23.8.2026
 
 Hutchins et al 2011: Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains, luku 3.2 Intrusion Kill Chain. Luettavissa: https://lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Intel-Driven-Defense.pdf Luettu 24.8.2026
