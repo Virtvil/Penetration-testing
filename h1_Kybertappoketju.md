@@ -50,6 +50,8 @@ Ryhdyin seuraavaksi irroittamaan virtuaalikonettani verkosta. Aluksi luin ja tal
 
 <img width="435" height="772" alt="VirtualBox_Kali_25_08_2026_21_20_15" src="https://github.com/user-attachments/assets/2da1b3cb-6c30-4338-9102-0a922a99ab29" />
 
+Ladattuani VPN koneelleni, ryhdyin ottamaan sitä käyttööni ruudun oikeasta yläreunasta, josta Ethernet porttia klikkaamalla valitsin _VPN Connections>Add a VPN connection...>Import a saved VPN configuration_. Tämän avulla pystyinkin valitsemaan juuri lataamani VPN tiedoston.
+
 <img width="565" height="379" alt="VirtualBox_Kali_25_08_2026_21_20_55" src="https://github.com/user-attachments/assets/15060c8e-db79-449f-91f2-c77283c6876f" />
 
 <img width="698" height="598" alt="VirtualBox_Kali_25_08_2026_21_30_19" src="https://github.com/user-attachments/assets/37a1e136-ebc5-40bc-bfc2-ce51d976fcbc" />
