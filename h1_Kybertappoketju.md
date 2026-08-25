@@ -64,9 +64,15 @@ Tämän jälkeen varmistin VPN yhteyden toimivuuden pingaamalla osoitetta 8.8.8.
 
 <img width="657" height="540" alt="VirtualBox_Kali_25_08_2026_21_54_54" src="https://github.com/user-attachments/assets/3833cf67-98f5-494c-972e-05e8a42ad32c" />
 
-Varmistettuani kaiken toimivan halutulla tavalla lähdin skannaamaan koneeni verkkoportteja. 
+Varmistettuani kaiken toimivan halutulla tavalla lähdin skannaamaan koneeni verkkoportteja komennolla _nmap -T4 -A localhost_. 
+Komennon osat toimivat jotakuinkin näin:
+Nmap: haluttu toiminto, eli network mapping
+-T4: Timing Template, jossa numeron kohotessa skannauksen nopeus kasvaa aggressiivisemmaksi (1-5).
+-A: käyttöjärjestelmän tunnistus, version tunnistus, skriptiskannaus ja traceroute
+localhost: oma laitteeni!
 
 <img width="649" height="514" alt="VirtualBox_Kali_25_08_2026_21_56_09" src="https://github.com/user-attachments/assets/10c39559-c188-4ca0-b025-268b9e6ec656" />
+
 Aluksi näistä ei ollut yksikään auki.
 
 Seuraavaksi poistuin skannauksesta ja suljin VPN-yhteyden, jonka jälkeen asensin itselleni pari demonia (ssh ja nginx). Aktivoin molemmat uusista demoneista ja palautin VPN-yhteyden päälle. Yhteyden palauduttua skannasin porttini uudelleen ja huomasinkin kahden portin (22 ja 80) tulleen käyttöön!
