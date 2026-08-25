@@ -58,6 +58,23 @@ Ladattuani VPN koneelleni, ryhdyin ottamaan sitä käyttööni ruudun oikeasta y
 
 <img width="527" height="619" alt="VirtualBox_Kali_25_08_2026_21_25_40" src="https://github.com/user-attachments/assets/2f6213ac-5317-4a6b-bcc6-d5a37370f2aa" />
 
+Tämän jälkeen varmistin VPN yhteyden toimivuuden pingaamalla osoitetta 8.8.8.8. Toimivuus varmistui sillä ping-pyynnöt eivät menneet läpi, eikä kokeillessani verkkokoneen selaimella googlen sivut toimineet.
+
+<img width="601" height="227" alt="VirtualBox_Kali_25_08_2026_21_55_05" src="https://github.com/user-attachments/assets/1f99f0f7-51d8-4c34-a360-970e53dae45c" />
+
+<img width="657" height="540" alt="VirtualBox_Kali_25_08_2026_21_54_54" src="https://github.com/user-attachments/assets/3833cf67-98f5-494c-972e-05e8a42ad32c" />
+
+Varmistettuani kaiken toimivan halutulla tavalla lähdin skannaamaan koneeni verkkoportteja. 
+
+<img width="649" height="514" alt="VirtualBox_Kali_25_08_2026_21_56_09" src="https://github.com/user-attachments/assets/10c39559-c188-4ca0-b025-268b9e6ec656" />
+Aluksi näistä ei ollut yksikään auki.
+
+Seuraavaksi poistuin skannauksesta ja suljin VPN-yhteyden, jonka jälkeen asensin itselleni pari demonia (ssh ja nginx). Aktivoin molemmat uusista demoneista ja palautin VPN-yhteyden päälle. Yhteyden palauduttua skannasin porttini uudelleen ja huomasinkin kahden portin (22 ja 80) tulleen käyttöön!
+
+<img width="647" height="529" alt="VirtualBox_Kali_25_08_2026_22_02_31" src="https://github.com/user-attachments/assets/41916f9d-1b60-4c02-85c9-3f2c57e5eba9" />
+
+
+
 
 ## Lähteet:
 Herrasmieshakkerit 2025: Tietomurron anatomia, vieraana Antti Kurittu. Kuunneltavissa: https://herrasmieshakkerit.fi/ Kuunneltu 23.8.2026
