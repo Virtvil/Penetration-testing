@@ -5,6 +5,12 @@ DORA: Digital Operations Resilience Act
 - Auttaa yrityksia luomaan omia penetraatiotestejä
 - Sisältämät roolit koostuvat ohjaustiimistä, ohjaustiimin vetäjästä, palveluntarjoajasta (uhkatietopalvelun tarjoaja ja Red Team -testaajat), sekä Blue Teamistä (työntekijöitä jotka puolustavat yhteisön tieto- ja viestintätekniikkaa).
 
+DORA regulaatio
+
+- ETLPT-menetelmään perustuvaa vaativaa testausta on suoritettava vähintään kolmen vuoden välein. Joissain tapauksissa tätä tiheyttä voidaan käskeä korottamaan.
+- Testaajien on toimitettava viranomaisille yhteenveto havainnoinneista, sekä tutkimuksen vaatimusten mukaisesta suorittamisesta.
+- Rahoituslaitosten on käytettävä TLPT-testauksen suorittamisessa testaajia, joita koskee erittäin laajat vaatimukset tiedon turvallisuuden vuoksi.
+
 ## a) Metasploitable asennus
 
 ## b) Virtuaaliverkko
