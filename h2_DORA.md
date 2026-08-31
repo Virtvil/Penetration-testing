@@ -45,7 +45,7 @@ Asetusten sijainti.
 
 <img width="968" height="638" alt="Näyttökuva 2026-08-31 193213" src="https://github.com/user-attachments/assets/82ce7867-0753-4128-9bd2-4bb48c98aa81" />
 
-Molemmat koneista omaavat nyt _host-only_ adapterin. Kali:ssa tämä on adapteri 2, kun taas Metasploitable-koneessa tämä on ainoa adapteri (1). Seuraavaa tehtävää varten katkaisin Kali-koneen NAT-adapterin sulkeakseni tämän pois verkosta, etteivät haluamattomat tahot (kuten lainsäädäntö) pääsisi näkemään mitä laittomuuksia puuhailen.
+Molemmat koneista omaavat nyt _host-only_ adapterin. Kali:ssa tämä on adapteri 2, kun taas Metasploitable-koneessa tämä on ainoa adapteri (1). 
 
 ## c) Virtuaaliverkon tutkiminen 
 
@@ -53,7 +53,7 @@ Seuraavaksi minun piti varmistaa, että koneet näkevät toisensa.
 
 <img width="630" height="341" alt="VirtualBox_Kali_31_08_2026_19_40_29" src="https://github.com/user-attachments/assets/7b7e6beb-7e24-44e9-ada3-8c1c9aada84b" />
 
-Yhteyden voi katkaista tai muodostaa Kalin verkkokuvakkeen kautta, jonka onkin jo tuttu aiemmasta tehtävästä ja VPN-yhteyksien muodostamisesta.
+Yhteyden voi katkaista tai muodostaa Kalin verkkokuvakkeen kautta, jonka onkin jo tuttu aiemmasta tehtävästä ja VPN-yhteyksien muodostamisesta. Tehtävää varten katkaisin seuraavaksi Kali-koneen NAT-adapterin sulkeakseni tämän pois verkosta, etteivät haluamattomat tahot (kuten lainsäädäntö) pääsisi näkemään mitä laittomuuksia koneiden välillä puuhaillaan.
 
 Yhdistin koneet toisiinsa, mutta varmistaakseni näiden välisen yhteyden ryhdyin pingaamaan niitä. Tätä varten tarvitsemmekin ensin molempien koneiden ip osoittet, jotka hain komennolla _ifconfig_.
 
