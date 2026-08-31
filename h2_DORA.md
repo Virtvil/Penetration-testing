@@ -84,11 +84,19 @@ Seuraavaksi siirryin Metasploitablelle, jossa pingasin _8.8.8.8_, sekä Kalia.
 
 Halutut toimivat pingit.
 
-
-
-
-
 ## d) Etsi Metasploitable
+
+Etsin seuraavaksi porttiskannerilla Metasploitablen, käyttämällä komentoa _nmap -sn 192.168.56.104_.
+
+<img width="629" height="180" alt="VirtualBox_Kali_31_08_2026_20_50_00" src="https://github.com/user-attachments/assets/5db716dd-c5bc-470a-b954-23525dbf1675" />
+
+Löytyy!
+
+Seuraavaksi tarkistin selaimella, että löysin oikean IP:n, tässä tapauksessa Metasploitablen weppipalvelimen ja tämän etusivun:
+
+<img width="601" height="500" alt="VirtualBox_Kali_31_08_2026_20_51_30" src="https://github.com/user-attachments/assets/10cf1438-d839-428f-9305-b8f45835b73b" />
+
+Löytyyhän se!
 
 ## e) Metasploitable porttiskannaus
 
