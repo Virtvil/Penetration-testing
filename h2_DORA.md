@@ -100,10 +100,30 @@ Löytyyhän se!
 
 ## e) Metasploitable porttiskannaus
 
+Aloitin porttiskannauksen komennolla nmap -A -T4 -p- 192.168.56.104. Pitkän skannauksen jäälkeen sain tietooni seuraavat avoimet portit:
+
+<img width="955" height="910" alt="VirtualBox_Kali_31_08_2026_21_01_34" src="https://github.com/user-attachments/assets/13e60fc3-cee3-46c0-b181-b3d503343f46" />
+
+<img width="955" height="910" alt="VirtualBox_Kali_31_08_2026_21_01_55" src="https://github.com/user-attachments/assets/2f7d9ce5-c311-45e5-ad4c-1815a9ef15e0" />
+
+<img width="955" height="640" alt="VirtualBox_Kali_31_08_2026_21_02_15" src="https://github.com/user-attachments/assets/0a3c8b44-b911-4381-b4e9-b9c3eb972e48" />
+
+Itselleni tuttuja ja kiinnostavia avoimia portteja ovet:
+
+- 22: Ssh, ssh palvelin jolla koneeseen saa etäyhteyden.
+- 23: Telnet, Hack the Boxin kautta tutuksi tullut salaamaton ja haavoittuvainen etähallinta.
+- 80: http, verkkopalvelimen käyttämä. Usein myös hyökkäysten kohteena.
+- 1099: java-rmi. Javan poistuessa käytössä on systeemi haavoittuvainen. HUOM ensimmäinen tulos googlatessa on "java-rmi exploit". PentestPad kuvaa java-rmi:tä nimipalveluna, jota Java-sovellus käyttää olioiden etsimiseen ja niiden metodien kutsumiseen verkon yli. 
+
+<img width="417" height="128" alt="Näyttökuva 2026-08-31 210756" src="https://github.com/user-attachments/assets/f9c89949-39f3-42ca-bf34-6765d374aa73" />
+
+
 ## Lähteet:
 Buuri 2026: DORA and TLPT testing - Lecture for Haaga-Helia on 31 March 2026. Luettavissa: https://terokarvinen.com/buuri-2026-dora-and-threat-lead-penetration-testing/buuri-2026-dora-and-threat-lead-penetration-testing--teros-pentest-course.pdf Luettu 27.8.2026
 
 Eur-Lex DORA (Regulation ... on digital operational resilience for the financial sector) 2022. Luettavissa: https://eur-lex.europa.eu/eli/reg/2022/2554/oj/eng Luettu 28.8.2026
+
+PentestPad Port 1099 – Java RMI (Remote Method Invocation) Luettavissa: https://www.pentestpad.com/port-exploit/port-1099-java-rmi-remote-method-invocation Luettu 31.8.2026
 
 Rapid 7 Docs, Metasploitable 2. Luettavissa: https://docs.rapid7.com/metasploit/metasploitable-2/ Luettu 31.8.2026
 
