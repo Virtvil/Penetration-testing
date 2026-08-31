@@ -78,8 +78,11 @@ Tämän jälkeen testasin koneiden välistä yhteyttä, pingaamalla Kalilla Meta
 
 Onnistunut pingaus Kalilta.
 
-Seuraavaksi siirryin Metasploitablelle josta pingasin Kalia
+Seuraavaksi siirryin Metasploitablelle, jossa pingasin _8.8.8.8_, sekä Kalia.
 
+<img width="657" height="238" alt="VirtualBox_Metasploitable 2_31_08_2026_20_06_51" src="https://github.com/user-attachments/assets/497bf05c-863e-4649-ba19-26998444cb38" />
+
+Halutut toimivat pingit.
 
 
 
