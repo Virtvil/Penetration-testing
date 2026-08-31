@@ -31,7 +31,59 @@ New Machine > Hard Disk > Use an existing Virtual Hard Disk File > Metasploitabl
 ## b) Virtuaaliverkko
 Saatuani Metasploitablen asennettua ryhdyin luomaan yhteyttä tämän ja aikaisemmin luomani Kali-virtuaalikoneen välille. En tiennyt kuinka tämän tehdään, joten turvauduin VirtualBoxin manuaaliin ja kappaleeseen 6, Virtual Networking.
 
+Käyttäessä Host-Only Network on host-kone yhteydessä virtuaalikoneisiin, jolloin ne pystyvät olemaan yhteyksissä toisiin virtuaalikoneisiin, sekä host-koneeseen. Manuaalin selittää kohdassa 6.7. Host-Only Networking seuraavalla tavalla miten Host-Only Network otetaan käyttöön:
+
+- Avataa virtuaalikoneen asetukset ja täältä _Network_.
+- Valitse _Adapter_ ja tarkista että _Enable Network Adapter_ on päällä.
+- Vaiha _NAT_:in tilalle _Attached to: Host-Only Adapter_.
+
+Seuraavaksi vaihdoin haluamalleni host-koneelle (eli Kali) toiseksi verkkoadapteriksi _Host-Only_, jotta tämä saa yhdistettyä itsenä Metasploitable-koneeseen.
+
+<img width="970" height="636" alt="Näyttökuva 2026-08-31 193035" src="https://github.com/user-attachments/assets/78860b6b-5014-49ba-94d2-c49eb8668be3" />
+
+Asetusten sijainti.
+
+<img width="968" height="638" alt="Näyttökuva 2026-08-31 193213" src="https://github.com/user-attachments/assets/82ce7867-0753-4128-9bd2-4bb48c98aa81" />
+
+Molemmat koneista omaavat nyt _host-only_ adapterin. Kali:ssa tämä on adapteri 2, kun taas Metasploitable-koneessa tämä on ainoa adapteri (1). Seuraavaa tehtävää varten katkaisin Kali-koneen NAT-adapterin sulkeakseni tämän pois verkosta, etteivät haluamattomat tahot (kuten lainsäädäntö) pääsisi näkemään mitä laittomuuksia puuhailen.
+
 ## c) Virtuaaliverkon tutkiminen 
+
+Seuraavaksi minun piti varmistaa, että koneet näkevät toisensa.
+
+<img width="630" height="341" alt="VirtualBox_Kali_31_08_2026_19_40_29" src="https://github.com/user-attachments/assets/7b7e6beb-7e24-44e9-ada3-8c1c9aada84b" />
+
+Yhteyden voi katkaista tai muodostaa Kalin verkkokuvakkeen kautta, jonka onkin jo tuttu aiemmasta tehtävästä ja VPN-yhteyksien muodostamisesta.
+
+Yhdistin koneet toisiinsa, mutta varmistaakseni näiden välisen yhteyden ryhdyin pingaamaan niitä. Tätä varten tarvitsemmekin ensin molempien koneiden ip osoittet, jotka hain komennolla _ifconfig_.
+
+
+<img width="640" height="383" alt="VirtualBox_Kali_31_08_2026_19_54_31" src="https://github.com/user-attachments/assets/95afe2f0-6ee4-4263-9196-2e47e4df7adc" />
+
+Kalin ip-osoite
+
+<img width="720" height="400" alt="VirtualBox_Metasploitable 2_31_08_2026_19_47_14" src="https://github.com/user-attachments/assets/75ff97a3-7a88-4a13-9d85-02badb211bca" />
+
+Metasploitable ip-osoite
+
+Seuraavaksi varmistin koneiden olevan irti verkosta, simppelillä _ping 8.8.8.8._ komennolla.
+
+<img width="640" height="134" alt="VirtualBox_Kali_31_08_2026_19_54_31_2" src="https://github.com/user-attachments/assets/d575eb8a-8efd-4980-85e5-18f1443e8fb3" />
+
+Verkkoyhteys ei onnistu, olemme piilossa!
+
+Tämän jälkeen testasin koneiden välistä yhteyttä, pingaamalla Kalilla Metasploitable. Tähän käytin komentoa _ping 192.168.56.104 -c 4_. Komennon osa _-c 4_ rajaa pingien määrän neljään.
+
+<img width="650" height="245" alt="VirtualBox_Kali_31_08_2026_20_02_30" src="https://github.com/user-attachments/assets/73f14316-ad04-4b3c-baf4-bc4d7bbd3c82" />
+
+Onnistunut pingaus Kalilta.
+
+Seuraavaksi siirryin Metasploitablelle josta pingasin Kalia
+
+
+
+
+
 
 ## d) Etsi Metasploitable
 
