@@ -18,7 +18,7 @@ Red team testing
 - Prosessi on suunniteltu luomaan mahdollisimman realistisia skenaarioita, jotka jäljittelevät mahdollisia oikeita hyökkäyksiä organisaatiota vastaan.
 
 ## a) Metasploitable asennus
-ALoitin etsimällä verkosta latauslinkkiä Metasploitable 2:lle, päätyen Rapid 7 Docs sivustolle. Sivusto sisälsi ohjeet Metasploitablen käyttöön, sekä linkin (https://www.rapid7.com/products/metasploit/metasploitable/) tämän lataamiseen virtuaalikoneelle.
+Aloitin etsimällä verkosta latauslinkkiä Metasploitable 2:lle, päätyen Rapid 7 Docs sivustolle. Sivusto sisälsi ohjeet Metasploitablen käyttöön, sekä linkin (https://www.rapid7.com/products/metasploit/metasploitable/) tämän lataamiseen virtuaalikoneelle.
 
 Ladattuani tämän ryhdyin luomaan itselleni uutta virtuaalikonetta VirtualBoxissa.
 
