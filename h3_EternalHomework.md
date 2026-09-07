@@ -24,9 +24,11 @@ Tunnetaan usein myös _"ping"_-komentona.
 
 ## d) Internet famous. 
 
+Etsi Metasploitablen mukana tulevista hyökkäyksistä (en: exploits; search) sellainen, joka on ollut julkisuudessa.
+
 ## e) Vertaile nmap:n omaa tiedostoon tallennusta (-oA foo) ja db_nmap:n tallennusta tietokantoihin. 
 
-## f) Murtaudu Metasploitablen vsftpd-palveluun
+## f) Murtaudu Metasploitablen vsftpd-palveluun.
 
 ## g) Kerää levittäytymisessä (lateral movement) tarvittavaa tietoa metasploitablesta. 
 
