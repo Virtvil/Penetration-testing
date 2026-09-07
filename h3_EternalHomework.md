@@ -25,7 +25,9 @@ Aloitin tehtävän tarkastamalla tarkastamalla, että Metasploitablella olisi k�
 systemctl status postgresql.service
 sudo systemctl start postgresql.servic
 ```
-Saatuani postgresql-palvelun päälle, avasin yhteyden metasploitableen komennoilla
+<img width="642" height="191" alt="VirtualBox_Kali_07_09_2026_19_38_47_2" src="https://github.com/user-attachments/assets/1efcbbc5-c165-4936-868c-837214af2586" />
+
+Saatuani postgresql-palvelun päälle, avasin yhteyden metasploitableen komennoilla:
 ```
 sudo msfdb init
 
@@ -33,6 +35,21 @@ sudo msfconsole
 
 sudo db_status
 ```
+<img width="735" height="769" alt="VirtualBox_Kali_07_09_2026_19_43_33" src="https://github.com/user-attachments/assets/35a79bdf-1438-4a33-8b2c-7dd9dc663132" />
+
+(HUOM! Muista oikeinkirjoituis, sillä kirjoitin itse aluksi useaan otteeseen msfdb komennon väärinpäin msfbd)
+
+<img width="442" height="65" alt="VirtualBox_Kali_07_09_2026_19_44_28" src="https://github.com/user-attachments/assets/e6d8963f-8fb6-4a2d-a99d-83cf231ae775" />
+
+Loin tehtävää varten itselleni myös workspacen, käyttämällä komentoa ```workspace -a h3``` ja otin tämän käyttööni komennolla ```workspace h3```.
+
+<img width="289" height="103" alt="VirtualBox_Kali_07_09_2026_19_48_47" src="https://github.com/user-attachments/assets/6193c1d5-ec61-493a-ae8a-f45817c26933" />
+
+Päästyäni tähän asti aloitin skannauksen komennolla ```db_nmap -sV 192.168.56.103```.
+
+<img width="955" height="225" alt="VirtualBox_Kali_07_09_2026_19_52_43" src="https://github.com/user-attachments/assets/1c86e3b0-2d7c-4e7c-8186-d54a7b532e0a" />
+
+Kannattaa skannata.
 
 ## c) Tarkastele Metasploitin tietokantoihin tallennettuja tietoja komennoilla "hosts" ja "services". 
 
