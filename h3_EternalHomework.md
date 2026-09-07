@@ -138,9 +138,11 @@ Päätin turvautua tavoista ensimmäiseen, vnc skanneriin, jonka pitäisi antaa 
 
 Asetin itselleni jälleen aloitus- ja kohdelaitteet komennoilla:
 
-```set LHOST 192.168.56.103
+```
+set LHOST 192.168.56.103
 
-set RHOST 192.168.56.104```
+set RHOST 192.168.56.104
+```
 
 Ja pääsinkin aktivoimaan komennolla ```exploit```.
 
