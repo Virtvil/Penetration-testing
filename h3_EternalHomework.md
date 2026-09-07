@@ -119,9 +119,11 @@ Ja ei muutakun rankkaa hakkerointia antamalla komento
 
 Normaalisti vastaavanlaisessa tilanteessa järkevin liike saattaisi olla tarkistaa onko kohteena oleva laite liitetty muualle tai onko tällä pääsyä muualle. Tämä onnistuu jälleen kerran käyttäen ```ipconfig``` komentoa.
 
-Mahdollista jatkoyhteyttä varten lieneekin mitä ovelinta ssh-avain itselleen, joka onnistuisi helposti ja nopeasti lataamalla koko /etc/ssh hakemisto. Tämähän onnistuu käyttämällä ```download /etc/ssh```-komentoa.
+<img width="796" height="400" alt="VirtualBox_Kali_07_09_2026_21_02_29" src="https://github.com/user-attachments/assets/d8ab56b4-8a5d-4e2c-a6f0-c2a0ea0620f6" />
 
-<img width="796" height="679" alt="VirtualBox_Kali_07_09_2026_21_02_29" src="https://github.com/user-attachments/assets/39d6144d-1a95-4e82-b9f6-08f8a10793f5" />
+Muuta kiinnostavaa tutkittavaa saattaa olla esimerkiksi ```sysinfo```-komennolla tietoon saatavat kohdelaitteen tiedot!
+
+<img width="955" height="128" alt="VirtualBox_Kali_07_09_2026_21_10_52" src="https://github.com/user-attachments/assets/c9540602-6b64-420a-915c-10b7a4c7cf58" />
 
 
 ## h) Murtaudu Metasploitableen jollain toisella tavalla. 
@@ -129,6 +131,10 @@ Mahdollista jatkoyhteyttä varten lieneekin mitä ovelinta ssh-avain itselleen, 
 (Jos tämä kohta on vaikea, voit tarvittaessa turvautua verkosta löytyviin läpikävelyohjeisiin. Merkitse silloin raporttiin, missä määrin tarvitsit niitä).
 
 ## i) Demonstroi Meterpretrin ominaisuuksia.
+
+Käyttäen Meterpreteriä on hyökkääjän mahdollista ryöstää ssh-avain itselleen mahdollista jatkoyhteyttä varten! Tämä onnistuisi helposti ja nopeasti lataamalla koko /etc/ssh hakemisto käyttämällä ```download /etc/ssh```-komentoa.
+
+<img width="796" height="282" alt="VirtualBox_Kali_07_09_2026_21_02_29_ssh" src="https://github.com/user-attachments/assets/3a4f8d9e-ebc6-4c05-b488-2e51eae6a8d1" />
 
 ## j) Tallenna shell-sessio tekstitiedostoon script-työkalulla tai tmux:lla.
 
