@@ -19,7 +19,7 @@ _-sn_ komento ohjeistaa Nmapia olemaan suorittamatta porttiskannausta kohteen tu
 Tunnetaan usein myös _"ping"_-komentona.
 
 ## b) Tallenna porttiskannauksen tuloksia Metasploitin tietokantoihin.
-Aloitin tehtävän tarkastamalla tarkastamalla, että Metasploitablella olisi käytössään tehtävässä haluttu tietokanta (tässä tapauksessa postgresql). Käytin tähän seuraavia komentoja:
+Aloitin tehtävän avaamalla molemmat virtuaalikoneeni, Kalin, sekä Metasploitable 2:n. Seuraavaksi halusin, että Metasploitablella olisi käytössään tehtävässä haluttu tietokanta (tässä tapauksessa postgresql). Käytin tähän seuraavia komentoja Kali-koneellani:
 
 ```
 systemctl status postgresql.service
@@ -27,7 +27,7 @@ sudo systemctl start postgresql.servic
 ```
 <img width="642" height="191" alt="VirtualBox_Kali_07_09_2026_19_38_47_2" src="https://github.com/user-attachments/assets/1efcbbc5-c165-4936-868c-837214af2586" />
 
-Saatuani postgresql-palvelun päälle, avasin yhteyden metasploitableen komennoilla:
+Saatuani postgresql-palvelun päälle, avasin yhteyden kali-laitteelta metasploitableen komennoilla:
 ```
 sudo msfdb init
 
@@ -45,9 +45,10 @@ Loin tehtävää varten itselleni myös workspacen, käyttämällä komentoa ```
 
 <img width="289" height="103" alt="VirtualBox_Kali_07_09_2026_19_48_47" src="https://github.com/user-attachments/assets/6193c1d5-ec61-493a-ae8a-f45817c26933" />
 
-Päästyäni tähän asti aloitin skannauksen komennolla ```db_nmap -sV 192.168.56.103```.
+Päästyäni tähän asti aloitin metasploitablen skannauksen komennolla ```db_nmap -sV 192.168.56.104```. Osoite oli itselläni muistissa viime tehtävästä, mutta tämän saisi helposti tietoon käyttämällä kohdelaitteella ```ifconfig```-komentoa.
 
-<img width="955" height="225" alt="VirtualBox_Kali_07_09_2026_19_52_43" src="https://github.com/user-attachments/assets/1c86e3b0-2d7c-4e7c-8186-d54a7b532e0a" />
+<img width="935" height="578" alt="VirtualBox_Kali_07_09_2026_20_03_19" src="https://github.com/user-attachments/assets/b42dd711-f6ac-4e3b-bbe6-4da71a680956" />
+
 
 Kannattaa skannata.
 
