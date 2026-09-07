@@ -166,7 +166,7 @@ Käyttäen Meterpreteriä on hyökkääjän mahdollista ryöstää ssh-avain its
 
 ## j) Tallenna shell-sessio tekstitiedostoon script-työkalulla tai tmux:lla.
 
-Loin aluksi itselleni _testitedosto.txt_-nimisen tiedoston, jonka jälkeen komennolla ```script -fa tekstitiedosto.txt``` pystyin tallentamaan shell-sessioni kyseiselle tiedostolle! Päätin avata yhteyden Metasploitableen, ajaa ```services```-komennon ja palata takaisin tarkastamaan tiedoston.
+Loin aluksi itselleni _testitedosto.txt_-nimisen tiedoston, jonka jälkeen komennolla ```script -fa tekstitiedosto.txt``` pystyin tallentamaan shell-sessioni kyseiselle tiedostolle! Päätin avata yhteyden Metasploitableen, mennä aiemmin luomaani _h3_ workspaceen, ajaa ```services```-komennon ja palata takaisin tarkastamaan tiedoston.
 
 <img width="955" height="764" alt="VirtualBox_Kali_07_09_2026_22_26_57" src="https://github.com/user-attachments/assets/39ca545a-c9d1-4dcb-b24e-34ca98aa0177" />
 
@@ -190,10 +190,63 @@ Komento olisi erittäin hyödyllinen halutessa tutkia esimerkiksi tiedusteluhyö
 
 Mitä Mitre Attack taktiikoita ja tekniikoita käytit tässä harjoituksessa?
 
+### Reconnaissance 	
+- Active Scanning
+- Gather Victim Host Information
+- Gather Victim Network Information 
+
+### Resource Development 
+- None
+
+### Initial Access 
+- Exploit Public-Facing Application
+
+### Execution
+- None
+
+### Persistence
+- None
+
+###  Privilege Escalation 
+- None
+
+### Stealth
+- None
+
+### Defense Impairment 
+- None
+
+### Credential Access 
+- Adversary-in-the-Middle
+- Brute Force
+
+### Discovery
+- Network Service Discovery
+- Software Discovery
+- System Information Discovery
+- System Network Configuration Discovery
+
+### Lateral Movement
+- Lateral Tool Transfer
+
+### Collection
+- Data from Local System
+
+### Command and Control
+- Non-Application Layer Protocol
+
+### Exfiltration
+- None
+
+### Impact
+- None
+
 # Lähteet:
 Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit. Luettavissa: https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml Luettu 7.9.20206
 
 MichaelLearns, Medium 2025. Luettavissa: https://medium.com/@MichaelLearns_/metasploitable-2-walkthrough-vnc-viewer-exploitation-7bb0b4e93fc8 Luettu 7.9.2026
+
+Mitre, ATT&CK. Luettavissa: https://attack.mitre.org/ Luettu 7.9.2026
 
 NIST, https://nvd.nist.gov/vuln/detail/cve-2020-9761
 
