@@ -128,7 +128,33 @@ Muuta kiinnostavaa tutkittavaa saattaa olla esimerkiksi ```sysinfo```-komennolla
 
 ## h) Murtaudu Metasploitableen jollain toisella tavalla. 
 
-(Jos tämä kohta on vaikea, voit tarvittaessa turvautua verkosta löytyviin läpikävelyohjeisiin. Merkitse silloin raporttiin, missä määrin tarvitsit niitä).
+Päätin tässä tehtävässä käyttää vnc exploittia, etsien mahdollisia tapoja murtautua Metasploitablelle komennolla ```search vnc```. Ja niitähän löytyikin noin 232 tapaa... Verkosta löytyy useampi eri läpikulku kyseiselle murtautumistavalle, joista kaikki tuntuvatkin toimivan samalla tavalla! Vilkaisin itse nopeasti Medium-sivustolta käyttäjän MichaelLearns läpikulkua vnc moduulista.
+
+<img width="955" height="813" alt="VirtualBox_Kali_07_09_2026_21_50_31" src="https://github.com/user-attachments/assets/82aed58e-26c3-4d86-a9b7-a2ccfcf9b813" />
+
+Päätin turvautua tavoista ensimmäiseen, vnc skanneriin, jonka pitäisi antaa minulle kohdelaitteella root-oikeudet! Komentohan tässä oli siis tuttu ```use 0```.
+
+<img width="955" height="187" alt="VirtualBox_Kali_07_09_2026_21_50_48" src="https://github.com/user-attachments/assets/689bd7ae-ea3a-4d4b-8766-19f14a61cdaa" />
+
+Asetin itselleni jälleen aloitus- ja kohdelaitteet komennoilla:
+
+```set LHOST 192.168.56.103
+
+set RHOST 192.168.56.104```
+
+Ja pääsinkin aktivoimaan komennolla ```exploit```.
+
+<img width="920" height="230" alt="VirtualBox_Kali_07_09_2026_21_58_39" src="https://github.com/user-attachments/assets/3b7895f7-eec4-43b0-b96b-3f1dbe8c406a" />
+
+Moduuli yrittää kirjautua sisään käyttäen luettelossaan olevia salasanoja kohteen ​​portissa 5900.
+
+<img width="625" height="250" alt="VirtualBox_Kali_07_09_2026_21_58_25" src="https://github.com/user-attachments/assets/24fedd97-0ccf-48f4-8e1e-2130ac936025" />
+
+Useat muut vnc-moduulit ajavat läpi useita eri yleisiä salasanoja. Valitsemamme moduuli ei tätä tee, mutta muita moduuleja kokeilemalla saamme tietoomme, että kohdelaite käyttää salasanaa password, joten käyttäkäämme sitä!
+
+<img width="540" height="384" alt="VirtualBox_Kali_07_09_2026_21_58_12" src="https://github.com/user-attachments/assets/2db9c8e1-6597-4b65-9613-360c7528663c" />
+
+Ja sisällä ollaan!
 
 ## i) Demonstroi Meterpretrin ominaisuuksia.
 
@@ -137,6 +163,16 @@ Käyttäen Meterpreteriä on hyökkääjän mahdollista ryöstää ssh-avain its
 <img width="796" height="282" alt="VirtualBox_Kali_07_09_2026_21_02_29_ssh" src="https://github.com/user-attachments/assets/3a4f8d9e-ebc6-4c05-b488-2e51eae6a8d1" />
 
 ## j) Tallenna shell-sessio tekstitiedostoon script-työkalulla tai tmux:lla.
+
+Loin aluksi itselleni _testitedosto.txt_-nimisen tiedoston, jonka jälkeen komennolla ```script -fa testitiedosto.txt``` pystyin tallentamaan shell-sessioni kyseiselle tiedostolle! Päätin avata yhteyden Metasploitableen, ajaa ```services```-komennon ja palata takaisin tarkastamaan tiedoston.
+
+<img width="955" height="764" alt="VirtualBox_Kali_07_09_2026_22_26_57" src="https://github.com/user-attachments/assets/39ca545a-c9d1-4dcb-b24e-34ca98aa0177" />
+
+<img width="915" height="696" alt="VirtualBox_Kali_07_09_2026_22_32_27" src="https://github.com/user-attachments/assets/a1585f47-747c-453a-b4af-b3dad7f35482" />
+
+Vaikka skripti ei syystä tai toisesta kerro loppuneensa/toimivansa, simppelillä ```nano testitiedosto.txt```-komennolla näen sen toimineen halutulla tavalla:
+
+<img width="955" height="825" alt="VirtualBox_Kali_07_09_2026_22_32_45" src="https://github.com/user-attachments/assets/410566ba-c914-4323-860c-f69566a6123a" />
 
 ## k) Pivot point. 
 
@@ -148,6 +184,8 @@ Mitä Mitre Attack taktiikoita ja tekniikoita käytit tässä harjoituksessa?
 
 # Lähteet:
 Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit. Luettavissa: https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml Luettu 7.9.20206
+
+MichaelLearns, Medium 2025. Luettavissa: https://medium.com/@MichaelLearns_/metasploitable-2-walkthrough-vnc-viewer-exploitation-7bb0b4e93fc8 Luettu 7.9.2026
 
 NIST, https://nvd.nist.gov/vuln/detail/cve-2020-9761
 
