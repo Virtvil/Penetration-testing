@@ -90,6 +90,17 @@ Skannauksien tulostus on mahdollista kolmeen eri muotoon:
 
 ## f) Murtaudu Metasploitablen vsftpd-palveluun.
 
+Aika kaivaa sormikkaat esiin ja käydä hyökkäykseen! Aloitin etsimällä Metasploitablen valmiita hyökkäyspaketteja käyttämällä komentoa ```search vsftpd```. Tämän avulla pääsin valitsemaan itselleni käyttöön haluamani moduulin, joista valitsin moduulin 1 komennolla ```use 1```.
+
+<img width="955" height="515" alt="VirtualBox_Kali_07_09_2026_20_51_42" src="https://github.com/user-attachments/assets/8aa8e762-4172-4d09-b6e6-458875d7fbec" />
+
+Tämän jälkeen pääsinkin valitsemaan mitä kyseisellä hyökkäyksellä haluaisin tehdä. Tietääkseni lisää, käytin komentoa ```show options```, tietääkseni hieman lisää hallussani olevista komennoista!
+
+<img width="955" height="785" alt="VirtualBox_Kali_07_09_2026_20_52_50" src="https://github.com/user-attachments/assets/bd4f57f9-6c65-4a9e-ba51-c925ccbd4632" />
+
+
+
+
 ## g) Kerää levittäytymisessä (lateral movement) tarvittavaa tietoa metasploitablesta. 
 
 Analysoi tiedot. Selitä, miten niitä voisi hyödyntää.
