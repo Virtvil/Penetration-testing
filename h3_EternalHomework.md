@@ -117,7 +117,12 @@ Ja ei muutakun rankkaa hakkerointia antamalla komento
 
 ## g) Kerää levittäytymisessä (lateral movement) tarvittavaa tietoa metasploitablesta. 
 
-Analysoi tiedot. Selitä, miten niitä voisi hyödyntää.
+Normaalisti vastaavanlaisessa tilanteessa järkevin liike saattaisi olla tarkistaa onko kohteena oleva laite liitetty muualle tai onko tällä pääsyä muualle. Tämä onnistuu jälleen kerran käyttäen ```ipconfig``` komentoa.
+
+Mahdollista jatkoyhteyttä varten lieneekin mitä ovelinta ssh-avain itselleen, joka onnistuisi helposti ja nopeasti lataamalla koko /etc/ssh hakemisto. Tämähän onnistuu käyttämällä ```download /etc/ssh```-komentoa.
+
+<img width="796" height="679" alt="VirtualBox_Kali_07_09_2026_21_02_29" src="https://github.com/user-attachments/assets/39d6144d-1a95-4e82-b9f6-08f8a10793f5" />
+
 
 ## h) Murtaudu Metasploitableen jollain toisella tavalla. 
 
