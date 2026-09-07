@@ -68,13 +68,24 @@ Tämän jälkeen komennolla ```services -h``` pystymme tarkkailemaan mahdollisia
 
 Tutkikaamme hieman lisää tätä java-rmi exploittia!
 
-National Vulnerability Database (NIST), kertoo Java RMI -palvelimen oletusasetuksien ovat turvattomuudesta, joka mahdollistaa Java-koodin suorittamisen URL-osoitteesta, sillä ohjelma käyttää RMI:n hajautetun roskienkeruun (Distributed Garbage Collector) metodia. Kyseinen haitta vaikutti palvelua vuosista 2001 jopa 2020 asti! Huh!
+National Vulnerability Database (NIST), kertoo Java RMI -palvelimen oletusasetuksien ovat turvattomuudesta, joka mahdollistaa Java-koodin suorittamisen URL-osoitteesta, sillä ohjelma käyttää RMI:n hajautetun roskienkeruun (Distributed Garbage Collector) metodia. Kyseinen haitta vaikutti palveluun vuosista 2001 jopa 2020 asti! Huh!
 
 <img width="940" height="225" alt="VirtualBox_Kali_07_09_2026_20_30_32" src="https://github.com/user-attachments/assets/f667f799-c720-47c3-a5bf-71d2a79249f6" />
 
-
 ## e) Vertaile nmap:n omaa tiedostoon tallennusta (-oA foo) ja db_nmap:n tallennusta tietokantoihin. 
 
+Mitkä ovat eri tiedostomuotojen ja Metasploitin tietokannan hyvät puolet?
+
+### Metasploitable: 
+Tallentaa nmap tulokset suoraan tietokantaan:
+- Tietokannasta datan voi viedä ulos ja sisään helposti käyttäjän haluamalla tavalla.
+- Pääsy tietokantaan sallii nopean ja luotettavan pääsyn skannauksien tuloksiin.
+
+### Nmap:in oma tiedosto tallennus (-oA foo)
+Skannauksien tulostus on mahdollista kolmeen eri muotoon:
+- XML
+- Grepable, helppo tiedostojen luku (grep-komento).
+- Normal
 
 
 ## f) Murtaudu Metasploitablen vsftpd-palveluun.
