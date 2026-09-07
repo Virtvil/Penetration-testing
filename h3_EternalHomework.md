@@ -66,9 +66,16 @@ Tämän jälkeen komennolla ```services -h``` pystymme tarkkailemaan mahdollisia
 
 ## d) Internet famous. 
 
-Etsi Metasploitablen mukana tulevista hyökkäyksistä (en: exploits; search) sellainen, joka on ollut julkisuudessa.
+Tutkikaamme hieman lisää tätä java-rmi exploittia!
+
+National Vulnerability Database (NIST), kertoo Java RMI -palvelimen oletusasetuksien ovat turvattomuudesta, joka mahdollistaa Java-koodin suorittamisen URL-osoitteesta, sillä ohjelma käyttää RMI:n hajautetun roskienkeruun (Distributed Garbage Collector) metodia. Kyseinen haitta vaikutti palvelua vuosista 2001 jopa 2020 asti! Huh!
+
+<img width="940" height="225" alt="VirtualBox_Kali_07_09_2026_20_30_32" src="https://github.com/user-attachments/assets/f667f799-c720-47c3-a5bf-71d2a79249f6" />
+
 
 ## e) Vertaile nmap:n omaa tiedostoon tallennusta (-oA foo) ja db_nmap:n tallennusta tietokantoihin. 
+
+
 
 ## f) Murtaudu Metasploitablen vsftpd-palveluun.
 
@@ -94,5 +101,7 @@ Mitä Mitre Attack taktiikoita ja tekniikoita käytit tässä harjoituksessa?
 
 # Lähteet:
 Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit. Luettavissa: https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml Luettu 7.9.20206
+
+NIST, https://nvd.nist.gov/vuln/detail/cve-2020-9761
 
 nmap manual, Host Discovery. Luettavissa: https://nmap.org/book/man-host-discovery.html Luettu 7.9.2026
