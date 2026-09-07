@@ -23,6 +23,7 @@ Aloitin tehtävän avaamalla molemmat virtuaalikoneeni, Kalin, sekä Metasploita
 
 ```
 systemctl status postgresql.service
+
 sudo systemctl start postgresql.servic
 ```
 <img width="642" height="191" alt="VirtualBox_Kali_07_09_2026_19_38_47_2" src="https://github.com/user-attachments/assets/1efcbbc5-c165-4936-868c-837214af2586" />
