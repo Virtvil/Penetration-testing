@@ -19,6 +19,20 @@ _-sn_ komento ohjeistaa Nmapia olemaan suorittamatta porttiskannausta kohteen tu
 Tunnetaan usein myös _"ping"_-komentona.
 
 ## b) Tallenna porttiskannauksen tuloksia Metasploitin tietokantoihin.
+Aloitin tehtävän tarkastamalla tarkastamalla, että Metasploitablella olisi käytössään tehtävässä haluttu tietokanta (tässä tapauksessa postgresql). Käytin tähän seuraavia komentoja:
+
+```
+systemctl status postgresql.service
+sudo systemctl start postgresql.servic
+```
+Saatuani postgresql-palvelun päälle, avasin yhteyden metasploitableen komennoilla
+```
+sudo msfdb init
+
+sudo msfconsole
+
+sudo db_status
+```
 
 ## c) Tarkastele Metasploitin tietokantoihin tallennettuja tietoja komennoilla "hosts" ja "services". 
 
@@ -52,4 +66,5 @@ Mitä Mitre Attack taktiikoita ja tekniikoita käytit tässä harjoituksessa?
 
 # Lähteet:
 Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit. Luettavissa: https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml Luettu 7.9.20206
+
 nmap manual, Host Discovery. Luettavissa: https://nmap.org/book/man-host-discovery.html Luettu 7.9.2026
