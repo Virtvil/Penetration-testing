@@ -166,19 +166,25 @@ Käyttäen Meterpreteriä on hyökkääjän mahdollista ryöstää ssh-avain its
 
 ## j) Tallenna shell-sessio tekstitiedostoon script-työkalulla tai tmux:lla.
 
-Loin aluksi itselleni _testitedosto.txt_-nimisen tiedoston, jonka jälkeen komennolla ```script -fa testitiedosto.txt``` pystyin tallentamaan shell-sessioni kyseiselle tiedostolle! Päätin avata yhteyden Metasploitableen, ajaa ```services```-komennon ja palata takaisin tarkastamaan tiedoston.
+Loin aluksi itselleni _testitedosto.txt_-nimisen tiedoston, jonka jälkeen komennolla ```script -fa tekstitiedosto.txt``` pystyin tallentamaan shell-sessioni kyseiselle tiedostolle! Päätin avata yhteyden Metasploitableen, ajaa ```services```-komennon ja palata takaisin tarkastamaan tiedoston.
 
 <img width="955" height="764" alt="VirtualBox_Kali_07_09_2026_22_26_57" src="https://github.com/user-attachments/assets/39ca545a-c9d1-4dcb-b24e-34ca98aa0177" />
 
 <img width="915" height="696" alt="VirtualBox_Kali_07_09_2026_22_32_27" src="https://github.com/user-attachments/assets/a1585f47-747c-453a-b4af-b3dad7f35482" />
 
-Vaikka skripti ei syystä tai toisesta kerro loppuneensa/toimivansa, simppelillä ```nano testitiedosto.txt```-komennolla näen sen toimineen halutulla tavalla:
+Vaikka skripti ei syystä tai toisesta kerro loppuneensa/toimivansa, simppelillä ```nano tekstitiedosto.txt```-komennolla näen sen toimineen halutulla tavalla:
 
 <img width="955" height="825" alt="VirtualBox_Kali_07_09_2026_22_32_45" src="https://github.com/user-attachments/assets/410566ba-c914-4323-860c-f69566a6123a" />
 
 ## k) Pivot point. 
 
-Laita kaikki harjoituksen tiedostot (script -fa, nmap -oA...) samaan kansioon. Hae sopiva pivot point (sovellus, versio, osoite, MAC-numero) 'grep -r' -komennolla. Keksi uskottava esimerkkikysymys, johon haet vastausta.
+Jostain syystä ajaessani ```grep -r``` komentoa, ei tiedostoni aukea halutulla tavalla? Tiedosto välähtää hetken ja näyttää vain seuraavaa:
+
+<img width="955" height="185" alt="VirtualBox_Kali_07_09_2026_22_50_18" src="https://github.com/user-attachments/assets/bc46ed38-5d74-48b6-923f-f3dfe402ce3d" />
+
+(Ajettu komento ```grep -r "vsftpd" harjoitus3/```)
+
+Komento olisi erittäin hyödyllinen halutessa tutkia esimerkiksi tiedusteluhyökkäyksen jälkeen tallennettuja shell-session tietoja kohteesta, esimerkiksi mahdollisten haavoittuvuuksien tarkkailun perässä!
 
 ## l) Attaaack! 
 
