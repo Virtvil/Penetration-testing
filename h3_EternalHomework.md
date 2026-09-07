@@ -39,7 +39,7 @@ sudo db_status
 
 <img width="955" height="462" alt="VirtualBox_Kali_07_09_2026_20_05_26" src="https://github.com/user-attachments/assets/8d223acd-f77e-461e-9c32-2e8050054036" />
 
-(HUOM! Muista oikeinkirjoituis, sillä kirjoitin itse aluksi useaan otteeseen msfdb komennon väärinpäin msfbd)
+(HUOM! Muista oikeinkirjoitus, sillä kirjoitin itse aluksi useaan otteeseen msfdb komennon väärinpäin msfbd)
 
 Loin tehtävää varten itselleni myös workspacen, käyttämällä komentoa ```workspace -a h3``` ja otin tämän käyttööni komennolla ```workspace h3```.
 
