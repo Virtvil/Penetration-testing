@@ -13,6 +13,8 @@
   7. Raportointi
 - Metasploit Frameworkin perusteet sekä exploit-, post-exploit-, liitännäis- ja apumoduulien (auxiliary modules) käyttö Metasploitissa.
 
+## b) Tallenna porttiskannauksen tuloksia Metasploitin tietokantoihin.
+
 ### nmap -sn
 _-sn_ komento ohjeistaa Nmapia olemaan suorittamatta porttiskannausta kohteen tunnistamisen jälkeen, jolloin komento kertoo ainoastaan käytettävissä olevat isännät, jotka vastasivat tunnistuskyselyihin.
 
