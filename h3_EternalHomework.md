@@ -2,9 +2,19 @@
 
 ## x) Materiaalit:
 ### Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit
+- Penetraatiotestauksen perusteet käyttäen Metasploittia.
+- Koostuu seitsemästä osasta:
+  1. Esivuorovaikutukset
+  2. Tiedusteluvaihe
+  3. Uhkamallinnus
+  4. Haavoittuvuusanalyysi
+  5. Hyödyntäminen
+  6. Hyödyntämisen jälkeiset toimet
+  7. Raportointi
+- Metasploit Frameworkin perusteet sekä exploit-, post-exploit-, liitännäis- ja apumoduulien (auxiliary modules) käyttö Metasploitissa.
 
 ### nmap -sn
-_-sn_ komento ohjeistaa Nmapia olemaan suorittamatta porttiskannausta kohteen tunnistamisen jälkeen, jolloin komento tulostaa ainoastaan ​​ne käytettävissä olevat isännät, jotka vastasivat tunnistuskyselyihin.
+_-sn_ komento ohjeistaa Nmapia olemaan suorittamatta porttiskannausta kohteen tunnistamisen jälkeen, jolloin komento kertoo ainoastaan käytettävissä olevat isännät, jotka vastasivat tunnistuskyselyihin.
 
 Tunnetaan usein myös _"ping"_-komentona.
 
