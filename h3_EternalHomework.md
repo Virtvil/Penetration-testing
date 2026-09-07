@@ -46,12 +46,22 @@ Loin tehtävää varten itselleni myös workspacen, käyttämällä komentoa ```
 
 Päästyäni tähän asti aloitin metasploitablen skannauksen komennolla ```db_nmap -sV 192.168.56.104```. Osoite oli itselläni muistissa viime tehtävästä, mutta tämän saisi helposti tietoon käyttämällä kohdelaitteella ```ifconfig```-komentoa.
 
+(Tässä tehtävän osiossa skannasin alkuun myös vahingossa myös Kali-koneen (192.168.56.103), joka näkyykin myös tallentuneena harjoituksen c-osiossa.)
+
 <img width="935" height="578" alt="VirtualBox_Kali_07_09_2026_20_03_19" src="https://github.com/user-attachments/assets/b42dd711-f6ac-4e3b-bbe6-4da71a680956" />
 
 
 Kannattaa skannata.
 
 ## c) Tarkastele Metasploitin tietokantoihin tallennettuja tietoja komennoilla "hosts" ja "services". 
+
+Seuraavaksi käyttäen komentoja ```hosts``` ja ```services``` aloin tarkastelemaan tietokantaan tallentuneita kohdekoneita (saatu tietoon ```nmap```-komennoilla), sekä myös tallentuneita palveluita.
+
+<img width="955" height="650" alt="VirtualBox_Kali_07_09_2026_20_10_36" src="https://github.com/user-attachments/assets/d61847b5-8570-4104-99e5-ba0f383652c8" />
+
+Tämän jälkeen komennolla ```services -h``` pystymme tarkkailemaan mahdollisia tapoja rajata hakuja. ```-S``` parametri kuulostaakin parhaalta tähän touhuun! Rajataampas haku siis myöskin edellisessä tehtävässä tutuksi tulleeseen _java-rmi_-palveluun käyttäen komentoa ```services -S java-rmi```!
+
+<img width="937" height="478" alt="VirtualBox_Kali_07_09_2026_20_18_18" src="https://github.com/user-attachments/assets/61e58f6b-36c7-43ef-bf71-e6cab23e7247" />
 
 ## d) Internet famous. 
 
