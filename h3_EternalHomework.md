@@ -35,11 +35,10 @@ sudo msfconsole
 
 sudo db_status
 ```
-<img width="735" height="769" alt="VirtualBox_Kali_07_09_2026_19_43_33" src="https://github.com/user-attachments/assets/35a79bdf-1438-4a33-8b2c-7dd9dc663132" />
+
+<img width="955" height="462" alt="VirtualBox_Kali_07_09_2026_20_05_26" src="https://github.com/user-attachments/assets/8d223acd-f77e-461e-9c32-2e8050054036" />
 
 (HUOM! Muista oikeinkirjoituis, sillä kirjoitin itse aluksi useaan otteeseen msfdb komennon väärinpäin msfbd)
-
-<img width="442" height="65" alt="VirtualBox_Kali_07_09_2026_19_44_28" src="https://github.com/user-attachments/assets/e6d8963f-8fb6-4a2d-a99d-83cf231ae775" />
 
 Loin tehtävää varten itselleni myös workspacen, käyttämällä komentoa ```workspace -a h3``` ja otin tämän käyttööni komennolla ```workspace h3```.
 
