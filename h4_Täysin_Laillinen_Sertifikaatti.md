@@ -29,6 +29,9 @@ Alert("Hei Tero!") ei vielä tarjoa kummoista pääsyä. (Tässä alakohdassa ei
 
 # Lähteet:
 OWASP 2021: OWASP Top 10:2021 - Broken Access Control. Luettavissa: https://top10.owasp.org/2021/A01_2021-Broken_Access_Control/ Luettu 13.9.2026
+
 PortSwigger Academy - Insecure direct object references (IDOR)
+
 PortSwigger Academy - Path traversal
+
 PortSwigger Academy - Cross-site scripting
