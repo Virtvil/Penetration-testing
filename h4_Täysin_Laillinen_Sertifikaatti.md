@@ -35,3 +35,5 @@ PortSwigger Academy - Insecure direct object references (IDOR)
 PortSwigger Academy - Path traversal
 
 PortSwigger Academy - Cross-site scripting
+
+Karvinen Tero 2026. Täysin Laillinen Sertifikaatti. Luettavissa: https://terokarvinen.com/tunkeutumistestaus/ Luettu 13.9.2026
