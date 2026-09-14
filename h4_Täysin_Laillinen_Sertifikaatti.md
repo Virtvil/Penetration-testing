@@ -1,5 +1,13 @@
 # Harjoitus 4: Täysin Laillinen Sertifikaatti
 ## x) Materiaalit
+### A01:2021 – Broken Access Control 
+- Pääsynvalvonta varmistaa käytäntöjen noudattamisen niin etteivät käyttäjät voi toimia sallittujen oikeuksiens ulkopuolella.
+- Häiriötilanteet johtavat yleisesti tiedon luvattomaan paljastumiseen, muuttamiseen tai tuhoutumiseen.
+### PortSwigger Academy: Insecure direct object references (IDOR)
+
+### PortSwigger Academy: Path traversal
+
+### PortSwigger Academy: Cross-site scripting
 
 ## a) Totally Legit Sertificate. 
 Asenna OWASP ZAP, generoi CA-sertifikaatti ja asenna se selaimeesi. Laita ZAP proxyksi selaimeesi. Laita ZAP sieppaamaan myös kuvat, niitä tarvitaan tämän kerran kotitehtävissä. Osoita, että hakupyynnöt ilmestyvät ZAP:n käyttöliittymään. (Voi vaatia Firefox about:config network.proxy.allow_hijacking_localhost. Foxyproxy laittoi tämän aiemmin päälle itse. Kalin Firefox ESR oli viimeksi ongelmia Foxyproxyn kanssa - vaihtoehtona on asettaa Proxy käsin Settings, hakusana "proxy")
