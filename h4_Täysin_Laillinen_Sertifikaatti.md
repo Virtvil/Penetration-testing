@@ -9,7 +9,8 @@
 - Hyökkääjä saattaa pystyä toteuttamaan sekä horisontaalisen että vertikaalisen oikeuksien laajentamisen muuttamalla käyttäjätiedot sellaisiksi, jotka omaavat suurempia oikeuksia, kiertämällä samalla pääsynvalvonnan.
 - Muita mahdollisia hyökkäyksiä ovat esimerkiksi vuotaneiden salasanojen hyödyntäminen tai parametrien muokkaaminen sen jälkeen, kun hyökkääjä on päässyt käyttäjän tilitiedoille.
 ### PortSwigger Academy: Path traversal
-
+- Path traversal tunnetaan myös nimellä hakemiston läpikäynti (directory traversal). Nämä haavoittuvuudet mahdollistavat sen, että hyökkääjä voi lukea mielivaltaisia ​​tiedostoja palvelimelta, jossa sovellusta suoritetaan.
+- Tiedostojen polkujen kautta tehtävä hyökkäys, jossa käytetään hyväksi polkujen oikeuksia lisäämällä polkujen osoitteisiin ```../```-ketjua. Ketju on sallittu tiedostopolussa ja tarkoittaa siirtymistä yhden tason ylöspäin hakemistopuussa.
 ### PortSwigger Academy: Cross-site scripting
 
 ## a) Totally Legit Sertificate. 
