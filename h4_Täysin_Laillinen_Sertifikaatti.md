@@ -12,7 +12,10 @@
 - Path traversal tunnetaan myös nimellä hakemiston läpikäynti (directory traversal). Nämä haavoittuvuudet mahdollistavat sen, että hyökkääjä voi lukea mielivaltaisia ​​tiedostoja palvelimelta, jossa sovellusta suoritetaan.
 - Tiedostojen polkujen kautta tehtävä hyökkäys, jossa käytetään hyväksi polkujen oikeuksia lisäämällä polkujen osoitteisiin ```../```-ketjua. Tiedostopolku voi hyväksyä ketjun jolloin se sallii siirtymisen yhden tason ylöspäin hakemistopuussa.
 ### PortSwigger Academy: Cross-site scripting
-
+- Mahdollistaa hyökkääjälle saman alkuperän käytännön (same-origin policy) kiertämisen. Käytäntö on suunniteltu eristämään eri verkkosivustot toisistaan.
+- Sivustojen välisten komentosarja-ajojen (XSS) haavoittuvuudet mahdollistavat yleensä sen, että hyökkääjä voi esiintyä uhrina, suorittaa mitä tahansa toimintoja, joihin käyttäjällä on oikeudet, ja päästä käsiksi käyttäjän tietoihin.
+- Jos uhrilla on sovelluksessa korkeat käyttöoikeudet, hyökkääjä saattaa pystyä saamaan täyden hallinnan sovelluksen kaikista toiminnoista ja tiedoista.
+- Cross-site scripting toimii muokkaamalla haavoittuvaa verkkosivustoa siten, että se palauttaa käyttäjille haitallista JavaScript-koodia. Kun haitallinen koodi suoritetaan uhrin selaimessa, hyökkääjä voi ottaa täyden hallinnan uhrin ja sovelluksen välisestä vuorovaikutuksesta.
 ## a) Totally Legit Sertificate. 
 Asenna OWASP ZAP, generoi CA-sertifikaatti ja asenna se selaimeesi. Laita ZAP proxyksi selaimeesi. Laita ZAP sieppaamaan myös kuvat, niitä tarvitaan tämän kerran kotitehtävissä. Osoita, että hakupyynnöt ilmestyvät ZAP:n käyttöliittymään. (Voi vaatia Firefox about:config network.proxy.allow_hijacking_localhost. Foxyproxy laittoi tämän aiemmin päälle itse. Kalin Firefox ESR oli viimeksi ongelmia Foxyproxyn kanssa - vaihtoehtona on asettaa Proxy käsin Settings, hakusana "proxy")
 
@@ -46,6 +49,6 @@ PortSwigger Academy - Insecure direct object references (IDOR). Luettavissa: htt
 
 PortSwigger Academy - Path traversal. Luettavissa: https://portswigger.net/web-security/file-path-traversal Luettu 14.9.2026
 
-PortSwigger Academy - Cross-site scripting
+PortSwigger Academy - Cross-site scripting. Luettavissa: https://portswigger.net/web-security/cross-site-scripting Luettu 14.9.2026
 
 Karvinen Tero 2026. Täysin Laillinen Sertifikaatti. Luettavissa: https://terokarvinen.com/tunkeutumistestaus/ Luettu 13.9.2026
