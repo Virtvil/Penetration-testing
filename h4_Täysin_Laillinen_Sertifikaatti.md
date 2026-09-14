@@ -1,10 +1,13 @@
 # Harjoitus 4: Täysin Laillinen Sertifikaatti
 ## x) Materiaalit
 ### A01:2021 – Broken Access Control 
-- Pääsynvalvonta varmistaa käytäntöjen noudattamisen niin etteivät käyttäjät voi toimia sallittujen oikeuksiens ulkopuolella.
+- Pääsynvalvonta varmistaa käytäntöjen noudattamisen niin etteivät käyttäjät voi toimia sallittujen oikeuksien ulkopuolella.
 - Häiriötilanteet johtavat yleisesti tiedon luvattomaan paljastumiseen, muuttamiseen tai tuhoutumiseen.
 ### PortSwigger Academy: Insecure direct object references (IDOR)
-
+- Insecure direct object references (Turvattomat suorat objektiviittaukset (IDOR)) ovat pääsynvalvontaan liittyvä haavoittuvuus. Tilanne syntyy, kun sovellus käyttää käyttäjän antamaa syötettä objektien suoraan käsittelyyn.
+- Hyökkääjä saattaa päästä käsiksi esimerkiksi muitten asiakkaitten tietoihin simppelillä URL-osoitteen muutoksella.
+- Hyökkääjä saattaa pystyä toteuttamaan sekä horisontaalisen että vertikaalisen oikeuksien laajentamisen muuttamalla käyttäjätiedot sellaisiksi, jotka omaavat suurempia oikeuksia, kiertämällä samalla pääsynvalvonnan.
+- Muita mahdollisia hyökkäyksiä ovat esimerkiksi vuotaneiden salasanojen hyödyntäminen tai parametrien muokkaaminen sen jälkeen, kun hyökkääjä on päässyt käyttäjän tilitiedoille.
 ### PortSwigger Academy: Path traversal
 
 ### PortSwigger Academy: Cross-site scripting
@@ -38,9 +41,9 @@ Alert("Hei Tero!") ei vielä tarjoa kummoista pääsyä. (Tässä alakohdassa ei
 # Lähteet:
 OWASP 2021: OWASP Top 10:2021 - Broken Access Control. Luettavissa: https://top10.owasp.org/2021/A01_2021-Broken_Access_Control/ Luettu 13.9.2026
 
-PortSwigger Academy - Insecure direct object references (IDOR) Luettavissa: https://portswigger.net/web-security/access-control/idor Luettu 14.9.2026
+PortSwigger Academy - Insecure direct object references (IDOR). Luettavissa: https://portswigger.net/web-security/access-control/idor Luettu 14.9.2026
 
-PortSwigger Academy - Path traversal
+PortSwigger Academy - Path traversal. Luettavissa: https://portswigger.net/web-security/file-path-traversal Luettu 14.9.2026
 
 PortSwigger Academy - Cross-site scripting
 
