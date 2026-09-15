@@ -124,13 +124,36 @@ Palasinkin siis blogiin aikeenani syöttää MYRKYTETTY KOMMENTTI!
 
 <img width="955" height="747" alt="VirtualBox_Kali_15_09_2026_22_58_57" src="https://github.com/user-attachments/assets/5ac58194-0ef4-4ce8-af5f-291d496a1a70" />
 
-Verrkosivun ja sähköpostin pyytämät syötekentät pyysivät tietyssä formaatissa tietoja, mutta komenttikenttä ei! Tällöin pystyin syöttämään oman skriptini kommenttikentän kautta, jolloin se myös tallentui sivulle, näkyen myös muille sivuston käyttäjille.
+Verkkosivun ja sähköpostin pyytämät syötekentät pyysivät tietyssä formaatissa tietoja, mutta komenttikenttä ei! Tällöin pystyin syöttämään oman skriptini kommenttikentän kautta, jolloin se myös tallentui sivulle, näkyen myös muille sivuston käyttäjille.
 
 ### e) Selitä esimerkin avulla, mitä hyökkääjä hyötyy XSS-hyökkäyksestä. 
-Alert("Hei Tero!") ei vielä tarjoa kummoista pääsyä. (Tässä alakohdassa ei tarvitse tehdä testejä tietokoneella, pelkkä lyhyt ja selkeä selitys riittää.)
+XSS-hyökkäyksessä hyökkääjä pystyy syöttämään haitallista koodia luotettavalle verkkosivustolle, jolloin koodi suoritetaan uhrin selaimessa. Hyökkääjä ei yleensä vaaranna itse palvelinta, vaan kaappaa uhrin selainistunnon ja oikeudet.
+
+Mahdollisia hyötyjä hyökkääjälle:
+- Istunnon kaappaus
+- Evästeiden varastaminen: Hyökkääjä voi lukea käyttäjän istuntoevästeet ja kirjautua palveluun uhrin nimissä ilman salasanaa.
+- Phishing: Hyökkääjä voi muokata sivun sisältöä ja näyttää väärennetyn kirjautumislomakkeen, jolla uhrin tiedot saadaan hyökkääjän haltuun.
+- Käyttäjän oikeuksilla toimiminen
+- Sivuston ja laitteiden saastuttaminen: Hyökkääjä voi ohjata käyttäjän sivustolle, joka lataa uhrin laitteelle haittaohjelmia.
 
 ## Path traversal
 ### f) File path traversal, simple case. Laita tarvittaessa Zapissa kuvien sieppaus päälle.
+Aloitin nappaamalla ensimmäisen tarjotun tuotteen verkkokaupasta. Menin tuotteen omalle sivulle ja aloin tutkimaan mitä tietoja Zaproxy minulle tästä tarjoaa.
+
+<img width="955" height="835" alt="VirtualBox_Kali_15_09_2026_23_11_07" src="https://github.com/user-attachments/assets/47456811-f019-47ab-96f3-c59f4f4e0c3e" />
+
+Ahaa! Sivusto näyttää tarkan polun mistä kuva on saatavilla! _Materiaali_-osiossa keskustelimmekin path traversalista, sekä ```../```-ketjun käyttämisestä! Kokeillaanpas päästä käsiksi _passwd_-kansioon...
+
+<img width="955" height="722" alt="VirtualBox_Kali_15_09_2026_23_12_00" src="https://github.com/user-attachments/assets/2caad9a2-4f3f-4132-a87e-cb4f4c56f1b8" />
+
+Hmmm, ymmärrettävästi meille ei tarjota kuvaa, mutta pystymme tarkastelemaan varmasti Zaproxyn avulla kyseisen hakemiston sisältöjä?
+
+<img width="955" height="317" alt="VirtualBox_Kali_15_09_2026_23_13_13" src="https://github.com/user-attachments/assets/e1816bde-25c7-4450-b55e-de6049f3a7d0" />
+
+Hakemalla Zaproxyn kautta kuvan tiedot pystyin muuttamaan näytettäviä tietoja ja sainkin tietooni kaiken passwd kansion sisällön!
+
+<img width="887" height="764" alt="VirtualBox_Kali_15_09_2026_23_15_09" src="https://github.com/user-attachments/assets/c767e715-7c31-4f40-a67c-a704e707d0ba" />
+
 
 ### g) File path traversal, traversal sequences blocked with absolute path bypass
 
