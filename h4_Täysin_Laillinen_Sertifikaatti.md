@@ -55,7 +55,32 @@ Lopuksi tarkistin vielä toimivuuden suuntaamalla proxyn _Manual Explorer_ kautt
 
 
 ## b) Kettumaista. 
-Asenna "FoxyProxy Standard" Firefox Addon, ja lisää ZAP proxyksi siihen. Käytä FoxyProxyn "Patterns" -toimintoa, niin että vain valitsemasi weppisivut ohjataan Proxyyn. (Läksyssä ohjataan varmaankin PortSwigger Labs ja localhost.)
+Foxyproxy-lisäri löytyi helposti etsimällä Firefoxin _addons_-osiosta ja asentuu simppelisti _Add_-painiketta painamalla.
+
+<img width="955" height="496" alt="VirtualBox_Kali_15_09_2026_21_19_05" src="https://github.com/user-attachments/assets/576e33d3-ee7a-4247-b3ab-9f5678e4f510" />
+
+Foxy Proxylle oman Zapin asettaminen löytyy siirtymällä asetuksissa _"Proxies"_-osioon, josta proxysta saa tehtyään halutunlaisen. Määrittelin omani seuraavalla tavalla:
+
+```
+Title: Zap
+Type: HTTP
+Country:
+City:
+Hostname: localhost
+Port: 8080
+```
+
+Tämän lisäksi _Patterns_-toiminnon avulla pystyin lisäämään PortSwiggerin ja localhostin, jotta proxy käsittelisi vain näiden kautta kulkevaa liikennettä.
+
+```
+portswigger labs *://PortSwigger.net/*
+localhost *://localhost/*
+```
+
+Loppujen lopuksi tulokseni näytti tältä:
+
+<img width="955" height="535" alt="VirtualBox_Kali_15_09_2026_21_28_45" src="https://github.com/user-attachments/assets/b3fb5d40-2ff9-461b-a3b7-dbb5afd18672" />
+
 
 # PortSwigger Labs. 
 Ratkaise tehtävät. Selitä ratkaisusi: mitä palvelimella tapahtuu, mitä eri osat tekevät, miten hyökkäys löytyi, mistä vika johtuu. Kannattaa käyttää ZAPia, vaikka malliratkaisut käyttävät harjoitusten tekijän maksullista ohjelmaa. Monet tehtävät voi ratkaista myös pelkällä selaimella. Malliratkaisun kopioiminen ZAP:n tai selaimeen ei ole vastaus tehtävään, vaan ratkaisu ja haavoittuvuuden etsiminen on selitettävä ja perusteltava.
