@@ -45,6 +45,13 @@ Siirsin sertifikaatin kali-koneeni firefoxiin menemällä ```Settings -> Certifi
 
 <img width="787" height="298" alt="VirtualBox_Kali_15_09_2026_21_01_06" src="https://github.com/user-attachments/assets/653f201a-d5ce-4101-bbc5-ca998f5a1fef" />
 
+Varmistin vielä että Zaproxy tallentaa kuvat suuntaamalla ohjelmaan ja kohteeseen ```Tools -> Options -> Display -> Process Images in HTTP requests/responses``` jossa laitoin täpän ruutuun.
+
+<img width="789" height="600" alt="VirtualBox_Kali_15_09_2026_21_08_00" src="https://github.com/user-attachments/assets/4a874d3e-8265-4c0f-a845-338a41d301fe" />
+
+Lopuksi tarkistin vielä toimivuuden suuntaamalla proxyn _Manual Explorer_ kautta _example.com_-sivustolle.
+
+<img width="955" height="879" alt="VirtualBox_Kali_15_09_2026_21_11_35" src="https://github.com/user-attachments/assets/9009350f-290f-4c49-81cc-17e07ddcb004" />
 
 
 ## b) Kettumaista. 
