@@ -193,6 +193,29 @@ Joka putsauksien jälkeen näyttää tältä:
 Ja ketju toimii! Tämähän käy jokseenkin järkeen...
 ## Insecure Direct Object Reference (IDOR)
 ### i) Insecure direct object references
+Tehtävän tarkoituksena on saada chat-logien kautta ```carlos```-käyttäjän salasana. Tehtävänanto kertoo logien tallentuvan suoraan palvelimen tiedostoihin ja ne ovat haettavissa staattisten osoitteiden kautta. Kuulostaa siis järkevimmältä aloittaa keskustelu ja ryhtyä tarkistelemaan ```GET```-"kaavoja".
+
+Aloitin keskustelun ja tallensin tämän lokitiedoston.
+
+<img width="955" height="552" alt="VirtualBox_Kali_15_09_2026_23_54_16" src="https://github.com/user-attachments/assets/0348f7f2-6b28-48c4-b4e9-2d836346c2eb" />
+
+Zaproxysta tarkistaessa huomasin lataamani tiedoston oleva ```transcription/2.txt```. Lähdin tutkimaan täten pääsisinkö käsiksi ennen minua ladattuun ```trancription/1.txt```-tiedostoon!
+
+<img width="955" height="539" alt="VirtualBox_Kali_15_09_2026_23_55_58" src="https://github.com/user-attachments/assets/a773f1bf-f10d-4507-abd7-d59ca6dce1d3" />
+
+Muuttamalla osoitteeseen transcription/2.txt -> transcription/1.txt pääsin lataamaan tiedoston itselleni! Simppelillä ```cat 1.txt``` sain avattua keskustelun login ja nopeasti napattua salasanan itselleni.
+
+<img width="955" height="400" alt="VirtualBox_Kali_15_09_2026_23_59_15" src="https://github.com/user-attachments/assets/9e764a1e-6b4c-413f-9820-abf91c5d1858" />
+
+Ja röyhkeästi testiin!
+
+<img width="955" height="611" alt="VirtualBox_Kali_16_09_2026_00_00_02" src="https://github.com/user-attachments/assets/01d2a965-9721-4597-bc02-29b4c510fc93" />
+
+Ja sisällä ollaan!
+
+Tiedostojen ollessa tallennettuna järjestelmään ja helposti numeroituna ovat ne heti uhan alla löydettäviksi ja hyödynnetyiksi.
+
+
 
 # Lähteet:
 Kali - Zaproxy Tool Documentation Luettavissa: https://www.kali.org/tools/zaproxy/ Luettu 15.9.2026
