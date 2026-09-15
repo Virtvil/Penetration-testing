@@ -142,7 +142,7 @@ Aloitin nappaamalla ensimmäisen tarjotun tuotteen verkkokaupasta. Menin tuottee
 
 <img width="955" height="835" alt="VirtualBox_Kali_15_09_2026_23_11_07" src="https://github.com/user-attachments/assets/47456811-f019-47ab-96f3-c59f4f4e0c3e" />
 
-Ahaa! Sivusto näyttää tarkan polun mistä kuva on saatavilla! _Materiaali_-osiossa keskustelimmekin path traversalista, sekä ```../```-ketjun käyttämisestä! Kokeillaanpas päästä käsiksi _passwd_-kansioon...
+Ahaa! Sivusto näyttää tarkan polun mistä kuva on saatavilla! _Materiaali_-osiossa keskustelimmekin path traversalista, sekä ```../```-ketjun käyttämisestä! Kokeillaanpas päästä tämän avulla käsiksi _passwd_-kansioon...
 
 <img width="955" height="722" alt="VirtualBox_Kali_15_09_2026_23_12_00" src="https://github.com/user-attachments/assets/2caad9a2-4f3f-4132-a87e-cb4f4c56f1b8" />
 
@@ -154,8 +154,19 @@ Hakemalla Zaproxyn kautta kuvan tiedot pystyin muuttamaan näytettäviä tietoja
 
 <img width="887" height="764" alt="VirtualBox_Kali_15_09_2026_23_15_09" src="https://github.com/user-attachments/assets/c767e715-7c31-4f40-a67c-a704e707d0ba" />
 
-
 ### g) File path traversal, traversal sequences blocked with absolute path bypass
+
+Tämä tehtävä toimi samalla tapaa kuin edellinen, paitsi käyttämämme ```../```-ketjutus on estetty. Tämän sijaan tiedosto löytyykin (omasta mielestäni huomattavasti helpommalla) tavalla: 
+
+```https://0a810020035a87ef81624d1900270057.web-security-academy.net/image?filename=/etc/passwd```
+
+<img width="955" height="460" alt="VirtualBox_Kali_15_09_2026_23_26_57" src="https://github.com/user-attachments/assets/a9d3fbca-7188-4dcf-b73e-bc2864a4caa0" />
+
+<img width="955" height="299" alt="VirtualBox_Kali_15_09_2026_23_30_30" src="https://github.com/user-attachments/assets/96357d18-c1fd-430b-9cf7-e7cd9c4eda48" />
+
+<img width="955" height="533" alt="VirtualBox_Kali_15_09_2026_23_31_15" src="https://github.com/user-attachments/assets/6de8e389-7d15-4668-89b2-bd32c5a8bcfb" />
+
+Haavoittuvuus onkin siis sama kuin aiemmassa tehtävässä, erona vain kuinka tietoihin navigoidaan. Tässä tehtävässä absoluuttisen osoitteet päästävät käyttäjän käsiksi _passwd_-hakemistoon.
 
 ### h) File path traversal, traversal sequences stripped non-recursively
 ## Insecure Direct Object Reference (IDOR)
