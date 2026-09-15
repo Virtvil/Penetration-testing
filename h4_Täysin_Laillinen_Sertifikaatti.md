@@ -110,6 +110,22 @@ Haavoittuvuus tehtävän tilanteessa mahdollistaa haitallisen koodin syöttämis
 ### d) Stored XSS into HTML context with nothing encoded
 Tehtävän ideana on hyödyntää haavoittuvuutta jossa haitallinen tieto tallennetaan palvelimelle jolloin se on saatavilla kaikille käyttäjille.
 
+Aloitin jättämällä sivustolle kommentin, joka pyysi tarkkaa formaattia (tutkin aluksi tästä annettavaa viestiä, mutta en löytänyt mitään ihmeellisempiä lähetettyjä pyyntöjä). Korjasin formaatin _www._-muotoon jolloin pyyntöni meni läpi ja Zaproxyyn ilmestyi uusi ```post -> comment -> GET:confrimation``` ja ```POST:comment``` tuloste! 
+
+<img width="955" height="835" alt="VirtualBox_Kali_15_09_2026_22_48_23" src="https://github.com/user-attachments/assets/d4784197-54bd-45e0-934e-0671e53ae563" />
+
+<img width="234" height="354" alt="VirtualBox_Kali_15_09_2026_22_54_31" src="https://github.com/user-attachments/assets/b7554e04-fc8b-467b-9066-1aa5f8833087" />
+
+Palasinkin siis blogiin aikeenani syöttää MYRKYTETTY KOMMENTTI!
+
+```<script>alert("SAFKIS BE UPON YE")</script>```
+
+<img width="793" height="701" alt="VirtualBox_Kali_15_09_2026_22_58_07" src="https://github.com/user-attachments/assets/663f2d2b-92e3-46c4-9614-3be6dc9f6614" />
+
+<img width="955" height="747" alt="VirtualBox_Kali_15_09_2026_22_58_57" src="https://github.com/user-attachments/assets/5ac58194-0ef4-4ce8-af5f-291d496a1a70" />
+
+Verrkosivun ja sähköpostin pyytämät syötekentät pyysivät tietyssä formaatissa tietoja, mutta komenttikenttä ei! Tällöin pystyin syöttämään oman skriptini kommenttikentän kautta, jolloin se myös tallentui sivulle, näkyen myös muille sivuston käyttäjille.
+
 ### e) Selitä esimerkin avulla, mitä hyökkääjä hyötyy XSS-hyökkäyksestä. 
 Alert("Hei Tero!") ei vielä tarjoa kummoista pääsyä. (Tässä alakohdassa ei tarvitse tehdä testejä tietokoneella, pelkkä lyhyt ja selkeä selitys riittää.)
 
