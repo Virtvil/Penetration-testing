@@ -89,9 +89,22 @@ Luodut proxyt saatiin tallennuksen jälkeen käyttöön avaamalla Foxy Proxyn ku
 # PortSwigger Labs. 
 
 ## Cross Site Scripting (XSS)
-Aloitetaan tekemällä haku sivuston hakukenttään. Tässätapauksessa halusin kokeilla jotain niinkin simppeliä kuin _"admin"_.
+Aloitetaan tekemällä haku sivuston hakukenttään. Tässä tapauksessa halusin kokeilla jotain niinkin simppeliä kuin _"admin"_. Hakua tehtdessä tämä ilmestyykin näkyviin Zaproxyssa! Tiedämme nyt, että hakukenttään syötetyt komennot lähettävät GET-pyynnön suodattamatta tätä.
+
+<img width="286" height="512" alt="VirtualBox_Kali_15_09_2026_22_34_37" src="https://github.com/user-attachments/assets/844a6dce-33d1-4864-9b36-73b54d7d98a8" />
+
+<img width="955" height="438" alt="VirtualBox_Kali_15_09_2026_22_33_30" src="https://github.com/user-attachments/assets/85a8f6be-a53b-4907-ab19-51531df8ed42" />
+
+Olisin ehdottomasti voinut valita helpommin löydettävän lauseen kuin admin...
+
+Seuraavaksi syötin hakukenttään hirvittävän skriptin:
+
+```<script>alert("TERO OIS YLPEE")</script>
+
+<img width="955" height="474" alt="VirtualBox_Kali_15_09_2026_22_13_09" src="https://github.com/user-attachments/assets/914bfb6e-8a4c-4a2e-aa72-67d46f9eefb0" />
 
 
+Haavoittuvuus tehtävän tilanteessa mahdollistaa haitallisen koodin syöttämisen ja ulospäin tulostuvan tiedon näyttämisen!
 
 
 ### c) Reflected XSS into HTML context with nothing encoded
