@@ -73,19 +73,27 @@ Port: 8080
 Tämän lisäksi _Patterns_-toiminnon avulla pystyin lisäämään PortSwiggerin ja localhostin, jotta proxy käsittelisi vain näiden kautta kulkevaa liikennettä.
 
 ```
-portswigger labs *://PortSwigger.net/*
-localhost *://localhost/*
+portswigger labs *web-security-academy.net*
+localhost *localhost*
 ```
 
 Loppujen lopuksi tulokseni näytti tältä:
 
-<img width="955" height="535" alt="VirtualBox_Kali_15_09_2026_21_28_45" src="https://github.com/user-attachments/assets/b3fb5d40-2ff9-461b-a3b7-dbb5afd18672" />
+<img width="955" height="522" alt="VirtualBox_Kali_15_09_2026_22_27_38" src="https://github.com/user-attachments/assets/4b52e5f3-dd78-40e4-832f-d7673743c8da" />
+
+Luodut proxyt saatiin tallennuksen jälkeen käyttöön avaamalla Foxy Proxyn kuvake ja valitsemalle luodut proxyt.
+
+<img width="303" height="381" alt="VirtualBox_Kali_15_09_2026_21_39_03" src="https://github.com/user-attachments/assets/d25013db-86c2-43a9-aee6-807b5a62bc2c" />
 
 
 # PortSwigger Labs. 
-Ratkaise tehtävät. Selitä ratkaisusi: mitä palvelimella tapahtuu, mitä eri osat tekevät, miten hyökkäys löytyi, mistä vika johtuu. Kannattaa käyttää ZAPia, vaikka malliratkaisut käyttävät harjoitusten tekijän maksullista ohjelmaa. Monet tehtävät voi ratkaista myös pelkällä selaimella. Malliratkaisun kopioiminen ZAP:n tai selaimeen ei ole vastaus tehtävään, vaan ratkaisu ja haavoittuvuuden etsiminen on selitettävä ja perusteltava.
 
 ## Cross Site Scripting (XSS)
+Aloitetaan tekemällä haku sivuston hakukenttään. Tässätapauksessa halusin kokeilla jotain niinkin simppeliä kuin _"admin"_.
+
+
+
+
 ### c) Reflected XSS into HTML context with nothing encoded
 
 ### d) Stored XSS into HTML context with nothing encoded
