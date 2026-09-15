@@ -169,6 +169,28 @@ Tämä tehtävä toimi samalla tapaa kuin edellinen, paitsi käyttämämme ```..
 Haavoittuvuus onkin siis sama kuin aiemmassa tehtävässä, erona vain kuinka tietoihin navigoidaan. Tässä tehtävässä absoluuttisen osoitteet päästävät käyttäjän käsiksi _passwd_-hakemistoon.
 
 ### h) File path traversal, traversal sequences stripped non-recursively
+Jälleen sama peruste kuin aiemmissa tehtävissä, tällä kertaa ```../```-ketjutusta pyritään estämään poistamalla nämä syötteestä. Tämän vuoksi tuplaammekin ```../```-ketjustukset ```....//```-muotoon, sillä syötteen putsaus poistaa jokaisesta ketjusta yhden ```../```-merkin.
+
+Käyttämämme ketju on siis:
+```
+....//....//....//etc/passwd
+```
+
+Joka putsauksien jälkeen näyttää tältä:
+```
+../../../etc/passwd
+```
+
+
+<img width="955" height="759" alt="VirtualBox_Kali_15_09_2026_23_38_17" src="https://github.com/user-attachments/assets/13b16908-9627-426c-9bfa-5bbdbd68d079" />
+
+<img width="955" height="504" alt="VirtualBox_Kali_15_09_2026_23_43_17" src="https://github.com/user-attachments/assets/4e1cca20-c5ff-448e-81bc-ac657afba959" />
+
+<img width="955" height="295" alt="VirtualBox_Kali_15_09_2026_23_43_03" src="https://github.com/user-attachments/assets/4659f8c0-66e7-4dc9-bb14-d0940aca583a" />
+
+<img width="955" height="494" alt="VirtualBox_Kali_15_09_2026_23_43_42" src="https://github.com/user-attachments/assets/854ce541-cd8b-4cd7-a788-cf390e74fcad" />
+
+Ja ketju toimii! Tämähän käy jokseenkin järkeen...
 ## Insecure Direct Object Reference (IDOR)
 ### i) Insecure direct object references
 
