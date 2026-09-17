@@ -156,7 +156,7 @@ Hakemalla Zaproxyn kautta kuvan tiedot pystyin muuttamaan näytettäviä tietoja
 
 ### g) File path traversal, traversal sequences blocked with absolute path bypass
 
-Tämä tehtävä toimi samalla tapaa kuin edellinen, paitsi käyttämämme ```../```-ketjutus on estetty. Tämän sijaan tiedosto löytyykin (omasta mielestäni huomattavasti helpommalla) tavalla: 
+Tämä tehtävä toimi samalla tapaa kuin edellinen, paitsi käyttämämme ```../```-ketjutus on estetty. Tämän sijaan tiedosto löytyykin (omasta mielestäni huomattavasti helpommalla) tavalla, käyttäen absoluuttista osoitetta: 
 
 ```https://0a810020035a87ef81624d1900270057.web-security-academy.net/image?filename=/etc/passwd```
 
@@ -166,7 +166,7 @@ Tämä tehtävä toimi samalla tapaa kuin edellinen, paitsi käyttämämme ```..
 
 <img width="955" height="533" alt="VirtualBox_Kali_15_09_2026_23_31_15" src="https://github.com/user-attachments/assets/6de8e389-7d15-4668-89b2-bd32c5a8bcfb" />
 
-Haavoittuvuus onkin siis sama kuin aiemmassa tehtävässä, erona vain kuinka tietoihin navigoidaan. Tässä tehtävässä absoluuttisen osoitteet päästävät käyttäjän käsiksi _passwd_-hakemistoon.
+Haavoittuvuus onkin siis sama kuin aiemmassa tehtävässä, erona vain kuinka tietoihin navigoidaan. Tässä tehtävässä absoluuttiset osoitteet päästävät käyttäjän käsiksi _passwd_-hakemistoon.
 
 ### h) File path traversal, traversal sequences stripped non-recursively
 Jälleen sama peruste kuin aiemmissa tehtävissä, tällä kertaa ```../```-ketjutusta pyritään estämään poistamalla nämä syötteestä. Tämän vuoksi tuplaammekin ```../```-ketjustukset ```....//```-muotoon, sillä syötteen putsaus poistaa jokaisesta ketjusta yhden ```../```-merkin.
