@@ -1,4 +1,4 @@
-# Harjoitus 5: Fuzzy
+# Harjoitus 6: Fuzzy
 ## x) Materiaalit:
 ### Karvinen 2023: Find Hidden Web Directories - Fuzz URLs with ffuf
 
