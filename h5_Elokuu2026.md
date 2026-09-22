@@ -165,6 +165,23 @@ john zipzap-hash
 
 <img width="958" height="295" alt="VirtualBox_Kali_22_09_2026_21_39_00" src="https://github.com/user-attachments/assets/d16993f0-0fe5-411a-befa-2b15790534a1" />
 
+Salauksen muoto on kuitenkin kestävä ja tuntuu vievän ikuisuuden. Pyörittyään jonkin aikaa peruin vahingossa komennon yrittäessäni kopioida syöttämiäni komentoja ja lähdin tutkimaan lisävaihtoehtoja murtamiseen. Löysinkin komennon lisäosan ```--wordlist=``` jolla pystyn lisäämään aiemmin ladatun sanakirjan ```rockyou.txt``` komentoonmme:
+
+```
+john --wordlist=rockyou.txt zipzap-hash 
+```
+
+Ja murtaminen tapahtui noin sekunnissa!
+
+<img width="827" height="242" alt="VirtualBox_Kali_22_09_2026_21_47_38" src="https://github.com/user-attachments/assets/77119cc2-bc9b-40f2-bb6a-40e209631919" />
+
+Avasin vielä 7zip tiedoston komennolla ja selvittämällämme (meidän asettamallamme) salasanalla!
+
+```
+7z x zipzap.7z
+```
+
+<img width="683" height="522" alt="VirtualBox_Kali_22_09_2026_21_52_46" src="https://github.com/user-attachments/assets/92730700-b084-4a85-a5e1-4e88a1b4d532" />
 
 ## f) Tiiviste. Tee itse tai etsi verkosta salasanan tiiviste, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi. Voit esim. tehdä käyttäjän Linuxiin ja murtaa sen salasanan.)
 Tutkiessani muita tiivisteitä esiin pomppasi useita vaikeammin ratkottavia salauksia, mutta näiden purkamisen varoitettiin kestävän. Tämän takia päädyinkin _SHA_-tyypin salaukseen ja tälle yleisimpään _SHA265_-tiivisteeseen. Päätin käyttää tehtävässä tehtävännimikettä ```Elokuu2026``` uutena murrettavana salasanana. Aloitin luomalla tiivisteen käyttäen komentoa:
