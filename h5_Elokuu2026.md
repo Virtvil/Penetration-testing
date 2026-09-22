@@ -38,6 +38,19 @@ Joka antaa meille kryptatun salasanan:
 42f749ade7f9e195bf475f37a44cafcb
 ```
 
+Kopioimme ja siirrämme tämän aiemmin jo tutulla ```nano hash```-komennolla harjoitustiedostoomme.
+
+<img width="396" height="501" alt="VirtualBox_Kali_22_09_2026_14_57_54" src="https://github.com/user-attachments/assets/8b1d053e-0fc5-402c-8725-525d435f0ade" />
+
+Ladataan seuraavaksi suosittu sanakirja salasanoille, Rockyou! Lataus onnistuu komennoilla:
+```
+wget https://github.com/danielmiessler/SecLists/raw/master/Passwords/Leaked-Databases/rockyou.txt.tar.gz
+tar xf rockyou.txt.tar.gz
+rm rockyou.txt.tar.gz
+```
+<img width="1885" height="684" alt="VirtualBox_Kali_22_09_2026_15_10_01" src="https://github.com/user-attachments/assets/6e53b352-1828-4f7f-aec5-1d74d96e0ad6" />
+
+Nyt meillä on sanakirja salasanoille tekstimuodossa! 
 ## c) Asenna John the Ripper ja testaa sen toiminta murtamalla jonkin esimerkkitiedoston salasana.
 ## e) Tiedosto. Tee itse tai etsi verkosta jokin salakirjoitettu tiedosto, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi).
 ## f) Tiiviste. Tee itse tai etsi verkosta salasanan tiiviste, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi. Voit esim. tehdä käyttäjän Linuxiin ja murtaa sen salasanan.)
