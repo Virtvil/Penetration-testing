@@ -12,6 +12,12 @@ Bitwarden sivusto kertoo hash olevan yksisuuntainen matemaattinen funktio, joka 
 - Githubista ladattavissa oleva John the Ripper, Jumbo versio, pystyy murtamaan todella monia tiedostomuotoja/formaatteja.
 - Yllätyin kuinka hankalasti selvinnyt salasana on sijoitettu tuloksiin.
 ## a) Asenna Hashcat ja testaa sen toiminta murtamalla esimerkkisalasana.
+Asennus onnistuu komennoilla:
+```
+sudo apt-get update
+sudo apt install hashcat
+sudo apt install hashid
+```
 ## c) Asenna John the Ripper ja testaa sen toiminta murtamalla jonkin esimerkkitiedoston salasana.
 ## e) Tiedosto. Tee itse tai etsi verkosta jokin salakirjoitettu tiedosto, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi).
 ## f) Tiiviste. Tee itse tai etsi verkosta salasanan tiiviste, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi. Voit esim. tehdä käyttäjän Linuxiin ja murtaa sen salasanan.)
