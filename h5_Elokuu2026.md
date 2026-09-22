@@ -157,8 +157,17 @@ Salauksen purkuun käytetään mode 1400, joten seuraavaksi käytettävä koment
 hashcat -m 1400 -O '00e3d8962c8d9adfbb2ab7a2cf8c6c2fa51d6f01b4382b1dec84feb95e8208c4' haistpassu -o solved2
 ```
 
-HUOM! Komennossa ei käytetä rockyou.txt, vaan seuraavassa tehtävässä g luotua uutta haistpassu sanakirjaa!
+HUOM! Komennossa ei käytetä rockyou.txt, vaan seuraavassa tehtävässä g luotua uutta haistpassu sanakirjaa, joka sisältää lisättyjä suomenkielisiä salasanoja!
 
+Käytämme myös komennossa solved2, sillä normaali solved tiedosto sisältää edellisessä tehtävän ratkaistun salasanan.
+
+<img width="1265" height="688" alt="VirtualBox_Kali_22_09_2026_20_18_44" src="https://github.com/user-attachments/assets/0f267707-cf01-401c-b885-5bbff7f24783" />
+
+<img width="682" height="732" alt="VirtualBox_Kali_22_09_2026_20_19_25" src="https://github.com/user-attachments/assets/3b9ef872-1ab6-4558-bf11-7de588e09d7a" />
+
+Salasana murrettu! Tutkitaanpas tutulla ```cat solved2```-komennolla.
+
+<img width="625" height="67" alt="VirtualBox_Kali_22_09_2026_20_23_57" src="https://github.com/user-attachments/assets/ec177acd-c1e1-462b-89a6-649081e9343c" />
 
 ## g) Sanakirja. Oman sanakirjan teko parantaa onnistumismahdollisuuksia. Demonstroi, kuinka teet oman sanakirjan hashcat:n tai john:iin.
 Oman sanakirjan voi luoda esimerkiksi kopioimalla rockyou.txt sanakirjan sisällön ja lisätä siihen vaikkapa yleisimpiä Suomalaisia versioita salasanoista:
