@@ -138,6 +138,15 @@ Ja paketin sisältö on meidän!
 ## e) Tiedosto. Tee itse tai etsi verkosta jokin salakirjoitettu tiedosto, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi).
 ## f) Tiiviste. Tee itse tai etsi verkosta salasanan tiiviste, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi. Voit esim. tehdä käyttäjän Linuxiin ja murtaa sen salasanan.)
 ## g) Sanakirja. Oman sanakirjan teko parantaa onnistumismahdollisuuksia. Demonstroi, kuinka teet oman sanakirjan hashcat:n tai john:iin.
+Oman sanakirjan voi luoda esimerkiksi kopioimalla rockyou.txt sanakirjan sisällön ja lisätä siihen vaikkapa yleisimpiä Suomalaisia versioita salasanoista:
+
+```cp rockyou.txt haistpassu``` kopioi rockyou-sanakirjan sisälön uuteen _haistpassu_-tiedostoon. Tämän jälkeen komennolla ```nano haistpassu``` voit lisätä listalle omia yleisimmin käytettyjä salasanoja, kuten esimerkiksi _Elokuu26_, _salasana123_ tai muita vastaavia tietoturvan ihmeitä!
+
+<img width="694" height="242" alt="VirtualBox_Kali_22_09_2026_18_25_47" src="https://github.com/user-attachments/assets/12f46ac3-5f40-40f1-bc78-750005b867c7" />
+
+
+<img width="340" height="297" alt="VirtualBox_Kali_22_09_2026_18_24_35" src="https://github.com/user-attachments/assets/acb07160-9c7a-4760-91b1-2cccbe03f88b" />
+
 ## h) Hash rules. Näytä esimerkki HashCatin sääntöjen käytöstä (rules).
 # Lähteet:
 Karvinen Tero, 2022, Cracking Passwords with Hashcat, Luettavissa: https://terokarvinen.com/2022/cracking-passwords-with-hashcat/ Luettu 20.9.2026
