@@ -18,6 +18,17 @@ sudo apt-get update
 sudo apt install hashcat
 sudo apt install hashid
 ```
+<img width="1900" height="688" alt="VirtualBox_Kali_22_09_2026_14_42_20" src="https://github.com/user-attachments/assets/fd87d26f-f82e-48b4-9c98-5e590b07b7ca" />
+
+Olin asentanut hashcatin itse jo aiemmin oppitunnin aikana, mutta tässä silti todistus onnistuneista asennuksista.
+
+Lähdin seuraavaksi purkamaan simppeliä ```Password123```-salasanaa sillä olin 100% varma tämän löytyvän mistä tahansa valmiista sanakirjasta.
+
+Loin harjoitukselleni uuden harjoitus5-kansion (```mkdir harjoitus5```) ja siirryin tämän sisälle luomaan ```nano hash```-komennolla itselleni tiedoston jota ryhdyin purkamaan!
+
+<img width="1012" height="284" alt="VirtualBox_Kali_22_09_2026_14_47_15" src="https://github.com/user-attachments/assets/e79ba68b-0187-4de5-b5be-cec4fb3bd8dc" />
+
+
 ## c) Asenna John the Ripper ja testaa sen toiminta murtamalla jonkin esimerkkitiedoston salasana.
 ## e) Tiedosto. Tee itse tai etsi verkosta jokin salakirjoitettu tiedosto, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi).
 ## f) Tiiviste. Tee itse tai etsi verkosta salasanan tiiviste, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi. Voit esim. tehdä käyttäjän Linuxiin ja murtaa sen salasanan.)
