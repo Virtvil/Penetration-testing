@@ -137,6 +137,29 @@ unzip -P butterfly tero.zip
 Ja paketin sisältö on meidän!
 ## e) Tiedosto. Tee itse tai etsi verkosta jokin salakirjoitettu tiedosto, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi).
 ## f) Tiiviste. Tee itse tai etsi verkosta salasanan tiiviste, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi. Voit esim. tehdä käyttäjän Linuxiin ja murtaa sen salasanan.)
+Tutkiessani muita tiivisteitä esiin pomppasi useita vaikeammin ratkottavia salauksia, mutta näiden purkamisen varoitettiin kestävän. Tämän takia päädyinkin _SHA_-tyypin salaukseen ja tälle yleisimpään _SHA265_-tiivisteeseen. Päätin käyttää tehtävässä tehtävännimikettä ```Elokuu2026``` uutena murrettavana salasanana. Aloitin luomalla tiivisteen käyttäen komentoa:
+
+```
+echo -n 'Elokuu2026' | sha256sum
+```
+
+Ja tallensin tästä saadun tiivisteen nano-komennolla _Fsinchat_-tekstitiedostoon. Tämän jälkeen varmistin tunnistaako hashid tiedoston salauksen komennolla ```hashid Fsinchat```. 
+
+<img width="669" height="408" alt="VirtualBox_Kali_22_09_2026_20_12_23" src="https://github.com/user-attachments/assets/925a7ecc-2fd9-43fe-85c5-df0652703f19" />
+
+Seuraavaksi tarkistin minkä hashcat moodin haluan käyttöön purkamaan salausta komennolla: 
+```
+hashid -m 00e3d8962c8d9adfbb2ab7a2cf8c6c2fa51d6f01b4382b1dec84feb95e8208c4
+```
+
+Salauksen purkuun käytetään mode 1400, joten seuraavaksi käytettävä komentomme onkin:
+```
+hashcat -m 1400 -O '00e3d8962c8d9adfbb2ab7a2cf8c6c2fa51d6f01b4382b1dec84feb95e8208c4' haistpassu -o solved2
+```
+
+HUOM! Komennossa ei käytetä rockyou.txt, vaan seuraavassa tehtävässä g luotua uutta haistpassu sanakirjaa!
+
+
 ## g) Sanakirja. Oman sanakirjan teko parantaa onnistumismahdollisuuksia. Demonstroi, kuinka teet oman sanakirjan hashcat:n tai john:iin.
 Oman sanakirjan voi luoda esimerkiksi kopioimalla rockyou.txt sanakirjan sisällön ja lisätä siihen vaikkapa yleisimpiä Suomalaisia versioita salasanoista:
 
