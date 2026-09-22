@@ -68,12 +68,35 @@ hashcat -m 0 '42f749ade7f9e195bf475f37a44cafcb' rockyou.txt -o solved
 <img width="1318" height="540" alt="VirtualBox_Kali_22_09_2026_15_35_15" src="https://github.com/user-attachments/assets/feaf9fd3-bcf9-4751-9271-41cc798ee606" />
 
 
-Cracked-rivi kertoo meille salasanan paljastuneen! Tarkistetaan salasana vielä komennolla ```cat solved```
+Cracked-rivi kertoo meille salasanan paljastuneen! Tarkistetaan salasana vielä komennolla ```cat solved```.
 
 <img width="424" height="118" alt="VirtualBox_Kali_22_09_2026_15_36_39" src="https://github.com/user-attachments/assets/2a9f8fd1-899e-49f3-a5f5-c5677533e4c0" />
 
 Salasana onnistuneesti murrettu!
 ## c) Asenna John the Ripper ja testaa sen toiminta murtamalla jonkin esimerkkitiedoston salasana.
+Seuraavaksi ryhdyin asentamaan _John the Ripperiä_. Asennuksen ohjeissa käytettiin komentoa ```sudo apt-get -y install micro bash-completion git build-essential libssl-dev zlib1g zlib1g-dev zlib-gst libbz2-1.0 libbz2-dev atool zip wget```, mutta asennus antoi ilmoituksen ettei pakettia ```zlib-gst``` löydy. Kokeilinkin uudelleen tiputtamalla komennon ```zlib-gst``` osan ja pääsin jatkamaan asennusta onnistuneesti komennolla:
+```
+sudo apt-get -y install micro bash-completion git build-essential libssl-dev zlib1g zlib1g-dev libbz2-1.0 libbz2-dev atool zip wget
+```
+
+<img width="1131" height="301" alt="VirtualBox_Kali_22_09_2026_17_37_53" src="https://github.com/user-attachments/assets/e0adee22-590b-4f57-bbb3-48d7b9342b3d" />
+
+
+Ryhdyinkin tämän jälkeen asentamaan tarkemmin ohjelman _Jumbo_-versiota, jonka asennukseen käytin komentoa:
+```
+git clone --depth=1 https://github.com/openwall/john.git
+```
+
+<img width="697" height="171" alt="VirtualBox_Kali_22_09_2026_17_26_36" src="https://github.com/user-attachments/assets/851b57e1-2024-4ce5-96ee-c44356dd2084" />
+
+
+Kopioituani git-kansion suuntasin hakemistoon ```/john/src/``` jossa suoritin ```./configure```-komennolla jumbo-version konfiguroinnin.
+
+<img width="739" height="468" alt="VirtualBox_Kali_22_09_2026_17_38_41" src="https://github.com/user-attachments/assets/1b2e7f50-c568-46d9-96fd-a7bd0f3e040d" />
+
+Onnistunut konfigurointi.
+
+
 ## e) Tiedosto. Tee itse tai etsi verkosta jokin salakirjoitettu tiedosto, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi).
 ## f) Tiiviste. Tee itse tai etsi verkosta salasanan tiiviste, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi. Voit esim. tehdä käyttäjän Linuxiin ja murtaa sen salasanan.)
 ## g) Sanakirja. Oman sanakirjan teko parantaa onnistumismahdollisuuksia. Demonstroi, kuinka teet oman sanakirjan hashcat:n tai john:iin.
