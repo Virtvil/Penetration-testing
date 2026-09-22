@@ -28,6 +28,15 @@ Loin harjoitukselleni uuden harjoitus5-kansion (```mkdir harjoitus5```) ja siirr
 
 <img width="1012" height="284" alt="VirtualBox_Kali_22_09_2026_14_47_15" src="https://github.com/user-attachments/assets/e79ba68b-0187-4de5-b5be-cec4fb3bd8dc" />
 
+Tämän jälkeen ryhdyin salaamaan valitsemaamme ```Password123```-salasanaa md5-funktiolla. Tähän käytämme seuraavaa komentoa:
+```
+echo -n 'Password123' |md5sum
+```
+
+Joka antaa meille kryptatun salasanan:
+```
+42f749ade7f9e195bf475f37a44cafcb
+```
 
 ## c) Asenna John the Ripper ja testaa sen toiminta murtamalla jonkin esimerkkitiedoston salasana.
 ## e) Tiedosto. Tee itse tai etsi verkosta jokin salakirjoitettu tiedosto, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi).
