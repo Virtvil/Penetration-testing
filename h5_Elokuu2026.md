@@ -51,6 +51,28 @@ rm rockyou.txt.tar.gz
 <img width="1885" height="684" alt="VirtualBox_Kali_22_09_2026_15_10_01" src="https://github.com/user-attachments/assets/6e53b352-1828-4f7f-aec5-1d74d96e0ad6" />
 
 Nyt meillä on sanakirja salasanoille tekstimuodossa! 
+
+Tässä vaiheessa työskennellessä virtuaalikoneella on tälle asennettava jonkinlainen toolkit, jonka avulla hashcat pystyy läpikäymään sanakirjaamme. Tähän käy esimerkiksi OpenCL CPU-runtime, jonka pystyy asentamaan komennolla: ```sudo apt install -y pocl-opencl-icd```. 
+
+Asennuksen jälkeen pystymme ryhtymään käymään läpi salasanoja! Komento ```hashid -m 42f749ade7f9e195bf475f37a44cafcb``` antaa meille ehdotuksen millä salausfunktiolla salasanamme on kryptattu.
+
+<img width="504" height="424" alt="VirtualBox_Kali_22_09_2026_15_30_40" src="https://github.com/user-attachments/assets/c1c1ef84-874a-432f-b74c-a335eadb597f" />
+
+M5 ollessa käytetyin salausmuoto, käyttäkäämme sitä (vaikka tässä tehtävässä tiedämmekin itse salanneemme salasanamme tällä)! Käytetään seuraavaa komentoa:
+```
+hashcat -m 0 '42f749ade7f9e195bf475f37a44cafcb' rockyou.txt -o solved
+```
+
+<img width="1319" height="535" alt="VirtualBox_Kali_22_09_2026_15_34_14" src="https://github.com/user-attachments/assets/1d9474ba-4cde-436d-bd84-cfa0b4cd8952" />
+
+<img width="1318" height="540" alt="VirtualBox_Kali_22_09_2026_15_35_15" src="https://github.com/user-attachments/assets/feaf9fd3-bcf9-4751-9271-41cc798ee606" />
+
+
+Cracked-rivi kertoo meille salasanan paljastuneen! Tarkistetaan salasana vielä komennolla ```cat solved```
+
+<img width="424" height="118" alt="VirtualBox_Kali_22_09_2026_15_36_39" src="https://github.com/user-attachments/assets/2a9f8fd1-899e-49f3-a5f5-c5677533e4c0" />
+
+Salasana onnistuneesti murrettu!
 ## c) Asenna John the Ripper ja testaa sen toiminta murtamalla jonkin esimerkkitiedoston salasana.
 ## e) Tiedosto. Tee itse tai etsi verkosta jokin salakirjoitettu tiedosto, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi).
 ## f) Tiiviste. Tee itse tai etsi verkosta salasanan tiiviste, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi. Voit esim. tehdä käyttäjän Linuxiin ja murtaa sen salasanan.)
