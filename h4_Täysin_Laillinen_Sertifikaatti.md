@@ -1,4 +1,7 @@
 # Harjoitus 4: Täysin Laillinen Sertifikaatti
+- Kurssi: Tunkeutumistestaus (Karvinen 2026)
+- Opettaja: Tero Karvinen
+- Raportin kirjoittaja: Vili Virtanen
 ## x) Materiaalit
 ### A01:2021 – Broken Access Control 
 - Pääsynvalvonta varmistaa käytäntöjen noudattamisen niin etteivät käyttäjät voi toimia sallittujen oikeuksien ulkopuolella.
