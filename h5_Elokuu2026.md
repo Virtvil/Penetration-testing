@@ -111,7 +111,30 @@ wget https://TeroKarvinen.com/2023/crack-file-password-with-john/tero.zip
 
 <img width="1879" height="272" alt="VirtualBox_Kali_22_09_2026_17_53_05" src="https://github.com/user-attachments/assets/eb7d1f5a-f58c-40f2-a812-d61c455092e8" />
 
+Yritetään avata tiedosto ```unzip tero.zip```-komennolla.
 
+<img width="668" height="155" alt="VirtualBox_Kali_22_09_2026_18_00_30" src="https://github.com/user-attachments/assets/53cb733b-6f0c-4ba6-8589-a42fe9cabb57" />
+
+Tiedosto pyytää salasanaa. Olisipa meillä tapa saada se selville... Kuten juuri lataamamme John the Ripper! Käytetään seuraavia komentoja ajamaan meille selvittävät skriptit:
+
+```
+john/run/zip2john tero.zip > tero.zip.hash  
+
+john/run/john tero.zip.hash  
+```
+
+<img width="1165" height="369" alt="VirtualBox_Kali_22_09_2026_18_05_52" src="https://github.com/user-attachments/assets/da1dcc6b-e884-4b69-8564-3fc1bab7fb18" />
+
+Ahaa! Salasanamme on ```butterfly```! Unzipataan tiedosto salasanan avulla komennolla:
+
+```
+unzip -P butterfly tero.zip
+
+```
+
+<img width="658" height="250" alt="VirtualBox_Kali_22_09_2026_18_08_24" src="https://github.com/user-attachments/assets/7341e02b-d1d4-4413-b66f-0790fd2e0239" />
+
+Ja paketin sisältö on meidän!
 ## e) Tiedosto. Tee itse tai etsi verkosta jokin salakirjoitettu tiedosto, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi).
 ## f) Tiiviste. Tee itse tai etsi verkosta salasanan tiiviste, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi. Voit esim. tehdä käyttäjän Linuxiin ja murtaa sen salasanan.)
 ## g) Sanakirja. Oman sanakirjan teko parantaa onnistumismahdollisuuksia. Demonstroi, kuinka teet oman sanakirjan hashcat:n tai john:iin.
