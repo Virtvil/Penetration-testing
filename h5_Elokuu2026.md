@@ -140,7 +140,7 @@ Ja paketin sisältö on meidän!
 ## g) Sanakirja. Oman sanakirjan teko parantaa onnistumismahdollisuuksia. Demonstroi, kuinka teet oman sanakirjan hashcat:n tai john:iin.
 Oman sanakirjan voi luoda esimerkiksi kopioimalla rockyou.txt sanakirjan sisällön ja lisätä siihen vaikkapa yleisimpiä Suomalaisia versioita salasanoista:
 
-```cp rockyou.txt haistpassu``` kopioi rockyou-sanakirjan sisälön uuteen _haistpassu_-tiedostoon. Tämän jälkeen komennolla ```nano haistpassu``` voit lisätä listalle omia yleisimmin käytettyjä salasanoja, kuten esimerkiksi _Elokuu26_, _salasana123_ tai muita vastaavia tietoturvan ihmeitä!
+```cp rockyou.txt haistpassu``` kopioi rockyou-sanakirjan sisälön uuteen _haistpassu_-tiedostoon. Tämän jälkeen komennolla ```nano haistpassu``` voit lisätä listalle itse yleisimmin käytettyjä salasanoja, kuten esimerkiksi _Elokuu2026_, _salasana123_ tai muita vastaavia tietoturvan ihmeitä!
 
 <img width="694" height="242" alt="VirtualBox_Kali_22_09_2026_18_25_47" src="https://github.com/user-attachments/assets/12f46ac3-5f40-40f1-bc78-750005b867c7" />
 
