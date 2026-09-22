@@ -1,4 +1,7 @@
 # Harjoitus 5: Elokuu2026!
+- Kurssi: Tunkeutumistestaus (Karvinen 2026)
+- Opettaja: Tero Karvinen
+- Raportin kirjoittaja: Vili Virtanen
 ## x) Materiaalit:
 ### Karvinen 2022: Cracking Passwords with Hashcat
 - Sanakirjojen (lista yleisimmistä salasanoista) avulla salasanojen murto helpottuu
