@@ -136,7 +136,17 @@ unzip -P butterfly tero.zip
 
 Ja paketin sisältö on meidän!
 ## e) Tiedosto. Tee itse tai etsi verkosta jokin salakirjoitettu tiedosto, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi).
-Ryhdyin luomaan tehtävää varten itselleni zip-tiedostoa. Loin aluksi itselleni kaksi tekstitiedostoa komennoilla:
+Tutkin tehtävän alkuun Kalille asennettuja ohjelmia, osuisiko mikään niistä silmään, käyttäen komentoa:
+```
+apt list --installed
+```
+
+Tunnistin heti ensimmäisen ohjelman 7zip, olevan kuin aiemman tehtävän zip-pakkaus ohjelma ja päätinkin pakata, salata ja purkaa tämän tehtävää varten.
+
+<img width="649" height="67" alt="VirtualBox_Kali_22_09_2026_21_58_00" src="https://github.com/user-attachments/assets/700185d9-36ec-4996-b035-3f6241df036e" />
+
+
+Ryhdyin luomaan tehtävää varten itselleni 7z-tiedostoa. Loin aluksi itselleni kaksi tekstitiedostoa komennoilla:
 
 ```
 nano zip1.txt
