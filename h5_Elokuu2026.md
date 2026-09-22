@@ -192,13 +192,13 @@ Hashcat sisältää myös valmiita sääntömuunnoksia, jotka voit lisätä kome
 
 Esimerkiksi best66.rule sisältää 66 yksittäistä muunnossääntöä. Hashcat hyödyntää näitä sääntöjä ja testaa nopeasti yleisiä muutoksia. Jos esimerkiksi tehtävässä f olevassa salasanassa olisikin pieni kirjain edessä, testaisi sääntö automaattisesti myös version pienellä kirjaimella. 
 
-Voisimme aiemmassa tehtävässä f ajaa esimerkiksi komennon:
+Voisimme aiemmassa tehtävässä f ajaa seuraavanlaisen komennon jotta tämä testaisi myös kaikki yleisimmät vaihtelut salasanoistamme:
 
 ```
 hashcat -m 1400 -O Fsinchat haistpassu -r /usr/share/hashcat/rules/best66.rule -o solved66
 ```
 
-Jotta tämä testaisi myös kirjainten vaihtelua. Valitettavasti kuitenkin komennon ajaminen jo ratkaistulle salasanalle antaa meille _All hashes found as potfile and/or empty entries!_ vastauksen...
+Valitettavasti kuitenkin komennon ajaminen jo ratkaistulle salasanalle antaa meille _All hashes found as potfile and/or empty entries!_ vastauksen...
 
 <img width="1314" height="285" alt="VirtualBox_Kali_22_09_2026_21_10_27" src="https://github.com/user-attachments/assets/4cd3e3ed-37fa-420d-b99c-2b704dd65cff" />
 
