@@ -1,4 +1,7 @@
 # Harjoitus 2: DORA the Explora
+- Kurssi: Tunkeutumistestaus (Karvinen 2026)
+- Opettaja: Tero Karvinen
+- Raportin kirjoittaja: Vili Virtanen
 ## x) Materiaalit:
 DORA: Digital Operations Resilience Act
 - Sisältää vaatimuksia häiriönsietokyvyn testaukselle (digitaalisen toiminnan häiriönsietokyvyn perustason testaus ja uhkiin perustuva tunkeutumistestaus)
