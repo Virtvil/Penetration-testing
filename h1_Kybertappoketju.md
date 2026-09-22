@@ -1,5 +1,7 @@
 # Harjoitus 1: Kybertappoketju 
-
+- Kurssi: Tunkeutumistestaus (Karvinen 2026)
+- Opettaja: Tero Karvinen
+- Raportin kirjoittaja: Vili Virtanen
 ## Materiaalit
 Herrasmieshakkerit, Tietomurron anatomia:
 - Vähän turhan paljon mainontaa ja sponsorien etsintää jakson alkuun.
