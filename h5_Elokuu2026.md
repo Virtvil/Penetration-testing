@@ -136,6 +136,36 @@ unzip -P butterfly tero.zip
 
 Ja paketin sisältö on meidän!
 ## e) Tiedosto. Tee itse tai etsi verkosta jokin salakirjoitettu tiedosto, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi).
+Ryhdyin luomaan tehtävää varten itselleni zip-tiedostoa. Loin aluksi itselleni kaksi tekstitiedostoa komennoilla:
+
+```
+nano zip1.txt
+nano zap1.txt
+```
+
+Ja kirjoitin vastaavasti tiedostoihin sisälle zip ja zap. Seuraavaksi pakkasin tiedostot yhteen käyttämällä komentoa:
+```
+7z a -ppassword zipzap.7z zip1.txt zap2.txt
+```
+Komennossa parametri ```a``` pakkaa tiedostot yhteen ja parametri ```-p``` antaa meidän salata se valitsemallamme _password_ salasanalla. Lähteenä 7z manuaali.
+
+<img width="669" height="311" alt="VirtualBox_Kali_22_09_2026_21_32_31" src="https://github.com/user-attachments/assets/896f858c-79b3-431c-8a40-86a1d414e711" />
+
+Tämän jälkeen käännyin John the Ripperin puoleen ja lähdin muuttamaan 7zip tiedostoa unzipattavaksi komennolla:
+
+```
+7z2john zipzap.7z > zipzap-hash
+```
+
+Jonka jälkeen ryhdyin purkamaan tiedoston salausta komennolla:
+
+```
+john zipzap-hash
+```
+
+<img width="958" height="295" alt="VirtualBox_Kali_22_09_2026_21_39_00" src="https://github.com/user-attachments/assets/d16993f0-0fe5-411a-befa-2b15790534a1" />
+
+
 ## f) Tiiviste. Tee itse tai etsi verkosta salasanan tiiviste, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi. Voit esim. tehdä käyttäjän Linuxiin ja murtaa sen salasanan.)
 Tutkiessani muita tiivisteitä esiin pomppasi useita vaikeammin ratkottavia salauksia, mutta näiden purkamisen varoitettiin kestävän. Tämän takia päädyinkin _SHA_-tyypin salaukseen ja tälle yleisimpään _SHA265_-tiivisteeseen. Päätin käyttää tehtävässä tehtävännimikettä ```Elokuu2026``` uutena murrettavana salasanana. Aloitin luomalla tiivisteen käyttäen komentoa:
 
