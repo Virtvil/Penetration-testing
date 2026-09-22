@@ -13,7 +13,7 @@
 Bitwarden sivusto kertoo hash olevan yksisuuntainen matemaattinen funktio, joka muuntaa selväkielisen salasanan tietynmittaiseksi merkkijonoksi, jossa merkit ovat sekaisin, mahdollistaen turvallisen tunnistautumisen ilman varsinaisen salasanan tallentamista.
 ### Karvinen 2023: Crack File Password With John
 - Githubista ladattavissa oleva John the Ripper, Jumbo versio, pystyy murtamaan todella monia tiedostomuotoja/formaatteja.
-- Yllätyin kuinka hankalasti selvinnyt salasana on sijoitettu tuloksiin.
+- Yllätyin kuinka monia tiedostoja John the Ripper pystyy murtamaan.
 ## a) Asenna Hashcat ja testaa sen toiminta murtamalla esimerkkisalasana.
 Asennus onnistuu komennoilla:
 ```
