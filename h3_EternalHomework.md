@@ -1,5 +1,7 @@
 # Harjoitus 3: EternalHomework
-
+- Kurssi: Tunkeutumistestaus (Karvinen 2026)
+- Opettaja: Tero Karvinen
+- Raportin kirjoittaja: Vili Virtanen
 ## x) Materiaalit:
 ### Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit
 - Penetraatiotestauksen perusteet käyttäen Metasploittia.
