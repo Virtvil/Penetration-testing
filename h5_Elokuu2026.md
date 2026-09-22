@@ -96,6 +96,21 @@ Kopioituani git-kansion suuntasin hakemistoon ```/john/src/``` jossa suoritin ``
 
 Onnistunut konfigurointi.
 
+Konfiguroinnin päätyttyä ohjelma pyyltää meiltä _compile_-käskyä muodossa ```make -s clean && make -sj2```.
+
+<img width="689" height="105" alt="VirtualBox_Kali_22_09_2026_17_47_48" src="https://github.com/user-attachments/assets/4e4d87d8-4b84-4a9c-a3c0-2e25415b6683" />
+
+Löydämme kompilaation jälkeen ```.../john/run```-kansion sisältä ohjelman skriptit.
+
+<img width="1865" height="516" alt="VirtualBox_Kali_22_09_2026_17_49_17" src="https://github.com/user-attachments/assets/9fedf8f9-71a5-445a-bba6-a0ab869a0d89" />
+
+Seuraavaksi latasin itselleni tehtävänannosta murrettavan _Zip_-tiedoston _harjoitus5_-kansioon komennolla:
+```
+wget https://TeroKarvinen.com/2023/crack-file-password-with-john/tero.zip
+```
+
+<img width="1879" height="272" alt="VirtualBox_Kali_22_09_2026_17_53_05" src="https://github.com/user-attachments/assets/eb7d1f5a-f58c-40f2-a812-d61c455092e8" />
+
 
 ## e) Tiedosto. Tee itse tai etsi verkosta jokin salakirjoitettu tiedosto, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi).
 ## f) Tiiviste. Tee itse tai etsi verkosta salasanan tiiviste, jonka saat auki. Murra sen salaus. (Jokin muu formaatti kuin aiemmissa alakohdissa kokeilemasi. Voit esim. tehdä käyttäjän Linuxiin ja murtaa sen salasanan.)
