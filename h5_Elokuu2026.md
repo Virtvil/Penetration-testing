@@ -176,13 +176,37 @@ Oman sanakirjan voi luoda esimerkiksi kopioimalla rockyou.txt sanakirjan sisäll
 
 <img width="694" height="242" alt="VirtualBox_Kali_22_09_2026_18_25_47" src="https://github.com/user-attachments/assets/12f46ac3-5f40-40f1-bc78-750005b867c7" />
 
-
 <img width="340" height="297" alt="VirtualBox_Kali_22_09_2026_18_24_35" src="https://github.com/user-attachments/assets/acb07160-9c7a-4760-91b1-2cccbe03f88b" />
 
 ## h) Hash rules. Näytä esimerkki HashCatin sääntöjen käytöstä (rules).
+Hashcat.net Rule-based Attack kertoo, että lisäämällä erilaisia sääntöjä komennoille pystymme muokkaamaan sanakirjoista haettuja salasanoja. Esimerkkisääntöjä ovat 
+```
+l - Vaihtaa haetun salasanan kaikki kirjaimet pieniksi
+u - Vaihtaa haetun salasanan kaikki kirjaimet suuriksi
+c - Vaihtaa haetun salasanan ensimmäisen kirjaimen isoksi, loput tekstistä pieneksi
+C - Vaihtaa haetun salasanan ensimmäisen kirjaimen pieneksi, loput tekstistä isoksi
+r - Kääntää haetun salasanan ympäri 
+```
+
+Hashcat sisältää myös valmiita sääntömuunnoksia, jotka voit lisätä komentoon jotta tämä kävisi läpi automaattisesti erilaisia versioita salasanoista!
+
+Esimerkiksi best66.rule sisältää 66 yksittäistä muunnossääntöä. Hashcat hyödyntää näitä sääntöjä ja testaa nopeasti yleisiä muutoksia. Jos esimerkiksi tehtävässä f olevassa salasanassa olisikin pieni kirjain edessä, testaisi sääntö automaattisesti myös version pienellä kirjaimella. 
+
+Voisimme aiemmassa tehtävässä f ajaa esimerkiksi komennon:
+
+```
+hashcat -m 1400 -O Fsinchat haistpassu -r /usr/share/hashcat/rules/best66.rule -o solved66
+```
+
+Jotta tämä testaisi myös kirjainten vaihtelua. Valitettavasti kuitenkin komennon ajaminen jo ratkaistulle salasanalle antaa meille _All hashes found as potfile and/or empty entries!_ vastauksen...
+
+<img width="1314" height="285" alt="VirtualBox_Kali_22_09_2026_21_10_27" src="https://github.com/user-attachments/assets/4cd3e3ed-37fa-420d-b99c-2b704dd65cff" />
+
 # Lähteet:
+Bitwarden, s.a. a, What is password hashing? Luettavissa: https://bitwarden.com/resources/what-is-password-hashing/ Luettu 21.9.2026
+
+Hashcat, s.a. a, Rule-based Attack Luettavissa: https://hashcat.net/wiki/doku.php?id=rule_based_attack Luettu 22.9.2026
+
 Karvinen Tero, 2022, Cracking Passwords with Hashcat, Luettavissa: https://terokarvinen.com/2022/cracking-passwords-with-hashcat/ Luettu 20.9.2026
 
 Karvinen Tero, 2023, Crack File Password With John, Luettavissa: https://terokarvinen.com/2023/crack-file-password-with-john/ Luettu 20.9.2026
-
-Bitwarden, s.a. a, What is password hashing? Luettavissa: https://bitwarden.com/resources/what-is-password-hashing/ Luettu 21.9.2026
