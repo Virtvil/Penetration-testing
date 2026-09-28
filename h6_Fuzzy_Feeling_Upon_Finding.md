@@ -44,4 +44,4 @@ Automaattinen kalibrointi käytettävissä: -ac
 ## i) Subdomains - Virtual Host Enumeration
 
 ## Lähteet:
-Hoikkala 2026 Fuzzing with Fuff, Luettavissa: https://terokarvinen.com/tunkeutumistestaus/hoikkala-2026-fuzzing-with-ffuf.pdf Luettu 27.9.2026
+Hoikkala, 2026, Fuzzing with Fuff, Luettavissa: https://terokarvinen.com/tunkeutumistestaus/hoikkala-2026-fuzzing-with-ffuf.pdf Luettu 27.9.2026
