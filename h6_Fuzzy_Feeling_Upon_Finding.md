@@ -80,7 +80,39 @@ hash -r
 
 Yritin tämän jälkeen toistaa aiemmat askeleet lataamalla ja asentamalla komennolla ```git clone https://github.com/ffuf/ffuf ; cd ffuf ; go get ; go build```, sekä komennolla ```go install github.com/ffuf/ffuf/v2@latest```, mutta molemmat komennot vain latasivat github repositorion minulle, eivätkä asentaneet tätä.
 
-Taistelin tämän kanssa useamman tuntia, yrittäen etsiä verkosta 
+Taistelin tämän kanssa useamman tuntia, luovutin ja kysyin apua chatgpt kielimallilta GPT-6 Astra seuraavalla promptilla:
+
+"Yritän asentaa virtuaalikoneelleni korkeakoulun tehtävää varten ffuf-ohjelmaa. Kone on Kali Linux pohjainen ja yritän käyttää golang-avulla ohjelman simppeliä asennusta, mutta ohjelman molemmat annetuista asennuskomennoista ei toimi.
+
+Komento: "go install github.com/ffuf/ffuf/v2@latest" ei tee yhtään mitään, kun taas komento: git "clone https://github.com/ffuf/ffuf ; cd ffuf ; go get ; go build" vain lataa repositorion minulle. Yrittäessäni tarkistaa versiota Kali-koneeni ilmoittaa että ffuf ei ole asennettuna, haluanko asentaa sen? Ongelmana on, että tarvitsen githubin kautta ladattavan v2.3.0.-version ja sudo install ffuf antaa minulle 2.1.0.-version."
+
+Neuvojen avuilla pääsin seuraavaan komentoketjuun:
+```
+go install github.com/ffuf/ffuf/v2@v2.3.0
+echo 'export PATH="$PATH:$(go env GOPATH)/bin"' >> ~/.zshrc
+source ~/.zshrc
+which ffuf
+ffuf -V
+```
+
+<img width="264" height="165" alt="VirtualBox_Kali_30_09_2026_00_04_23" src="https://github.com/user-attachments/assets/387c2e42-cce3-46fc-867b-af92329b08c4" />
+
+Joka SILTI antoi minulle version 2.1.0. Tässä vaiheessa minulle selvisi että versiointi on ladattava GitHubin julkaisusta erikseen. Hoikkalaa kiroten pääsin VIHDOIN lopulliseen tulokseeni komennoilla:
+```
+cd /tmp
+wget https://github.com/ffuf/ffuf/releases/download/v2.3.0/ffuf_2.3.0_linux_amd64.tar.gz
+tar -xzf ffuf_2.3.0_linux_amd64.tar.gz
+./ffuf -V
+mkdir -p ~/.local/bin
+mv ffuf ~/.local/bin/
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+which ffuf
+ffuf -V
+```
+
+<img width="525" height="522" alt="VirtualBox_Kali_30_09_2026_00_13_05" src="https://github.com/user-attachments/assets/448a1ff5-1689-4f64-bdfb-0326240693ef" />
+
 
 ## c1) Content discovery (Vaultline https://ffuf.io.fi/play tehtävät on numeroitu näin, käytetään tässä samoja.).
 ## c2) The interesting non-200
