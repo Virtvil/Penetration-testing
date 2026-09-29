@@ -130,10 +130,11 @@ Nyt pääsimme vihdoin kohdesivuston kimppuun komennolla ```ffuf -w content.txt 
 
 <img width="804" height="608" alt="VirtualBox_Kali_30_09_2026_00_26_31" src="https://github.com/user-attachments/assets/5c1f9e1b-36df-4775-a00b-322b62d1195b" />
 
-Lisäämällä komentoon ```-ac```, pystymme myös rajaamaan pois ns. "roskavastaukset". 
+Lisäämällä komentoon ```-ac```-parametrin, pystymme myös rajaamaan pois ns. "roskavastaukset". 
 
 <img width="766" height="622" alt="VirtualBox_Kali_30_09_2026_00_58_55" src="https://github.com/user-attachments/assets/41850c12-d996-4f1b-918e-0f43f4c32409" />
 
+Käyttämällä parametria ```-rate 100```, voimme rajoittaa sekunnin aikana tehtyjä pyyntöjä sataan, jotta palvelin ei kuormittuisi hirveästi.
 ## c2) The interesting non-200
 Seuraavaksi ryhdyin suodattamaan aikaisemmin saadusta tulosteestamme pois kaikki tulosteet jotka eivät olleet statuskoodi 200. Tehtävässä oli tarkoituksena käyttää komennossa funktioita ```-mc all``` sekä ```fc```. Ffuf -h komennon avulla pystymme näkemään, että ```-mc all``` viittaa HTTP statuskoodeihin kun taas ```-fc``` filtteröi tuloksia. Komennoksemme muodostuukin siis ```ffuf -w content.txt -u https://ffuf.io.fi/FUZZ -mc all -fc 200```
 
