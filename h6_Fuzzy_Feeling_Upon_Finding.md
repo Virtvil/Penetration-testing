@@ -139,7 +139,7 @@ Seuraavaksi ryhdyin suodattamaan aikaisemmin saadusta tulosteestamme pois kaikki
 
 <img width="770" height="508" alt="VirtualBox_Kali_30_09_2026_00_32_05" src="https://github.com/user-attachments/assets/5bde2d9c-8ce1-4eb4-94d5-17a02a6e0961" />
 
-Tehtävässä toimis kyllä myös aiemman tehtävän ```-ac```-lisäke.
+Tehtävässä toimisi myös aiemman tehtävän ```-ac```-lisäke.
 ## c3) Recursion
 Selvittääkseni aikaisempien suodatettujen kansioiden sisältöä pystyin kääntymään ```-recursion``` ja ```recursion-depth``` komentojen puoleen. ```-recursion``` komennolla kutsumme komentoamme käyttämään rekursiivista hakua, joka alkaa katsomaan mahdollisia polkuja haussamme. ```recursion-depth``` komennolla taas pystymme rajoittamaan kuinka syvälle hakuja teemme.
 
@@ -149,7 +149,43 @@ Käytin polkujen tutkimiseen komentoa ```ffuf -w content.txt -u https://ffuf.io.
 
 Tulosteesta näemme komennon lisäävän hakusanojen perusteella löydetyt hakemistot työjonoon (Adding a new job to the queue) ja ryhtyy käymään näitä läpi antamiemme parametrien avulla. Tällä tavalla pysymme löytämään toistensa alle piilotettuja tiedostoja, joita normaali skannaus ei löydä.
 ## c4) Virtual hosts
+Seuraavana tavoitteenani oli löytää palvelimen taustalta kolme piilotettua virtuaalipalvelinta. Vinkkimme tehtävään on, ettei avainsanan tarvitse sisältyä URL-osoitteeseen. Osoittamalla ```-u```-parametriamme pääverkkotunnukseen ja asettamalla `FUZZ` Host-otsikkotietoon. Osoittaessa ```-u```-parametria aliverkkotunnukseen varmenne kattaa vain pääverkkotunnuksen jolloin kättely  hylätään, eikä HTTP-yhteyttä muodostu lainkaan. Kaikki pyynnöt, jotka eivät vastaa jotakin näistä kolmesta, ohjautuvat oletussivustolle, joten tarvitsemme suodattimen. Komentoni alkuun näytti siis tältä:
+```
+ffuf -w content.txt -u https://ffuf.io.fi/FUZZ -H "Host: FUZZ.ffuf.io.fi"
+```
+Komentoni kuitenkin antoi erittäin laajan lajitelman tuloksia, joista suurimassa osassa oli kuitenkin 135 sanaa. Lisäämällä komentoon ```-fw``` parametrin pystyn kuitenkin suodattamaan pois haluamani vastaukset, ja yritinkin uudelleen suodattamalla nämä pois uudella versiolla komennosta:
+```
+ffuf -w content.txt -u https://ffuf.io.fi/FUZZ -H "Host: FUZZ.ffuf.io.fi" -fw 135
+```
+
+<img width="785" height="661" alt="VirtualBox_Kali_30_09_2026_01_21_07" src="https://github.com/user-attachments/assets/6f755b9f-b220-424c-875a-dfd4472fcc22" />
+
+Näemme, että saamamme tulos on nyt huomattavasti pienempi! Mutta ei kuitenkaan kolmea? Valitettavasti en kyseisessä tehtävässä päässyt pidemmälle...
 ## c9) The login you cannot replay (Has preflight! Has CSRF token!)
+Lopuksi tutustuin Ffufin uuteen _preflight_-toimintoon! Aloitin tarkistamalla ominaisuuden toiminnan komennolla ```ffuf -h | grep -c preflight```
+
+<img width="327" height="68" alt="VirtualBox_Kali_30_09_2026_01_30_47" src="https://github.com/user-attachments/assets/f9c36463-d679-4fb0-a5d3-57fa112ccc3e" />
+
+Tulos ei ole 0, eli se toimii! Seuraavaksi ajamaan tehtävänannon meille tarjoama koodi:
+
+```
+cat > login.raw <<'EOF'
+GET /login HTTP/1.1
+Host: ffuf.io.fi
+Accept: text/html
+
+EOF
+
+ffuf -w passwords.txt -u https://ffuf.io.fi/login -X POST \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "csrf_token=CSRFTOKEN&username=admin&password=FUZZ" \
+  -preflight login.raw \
+  -preflight-var 'CSRFTOKEN:name="csrf_token" value="([a-f0-9]+)"' \
+  -preflight-mode per-request \
+  -mc 302
+```
+
+<img width="809" height="722" alt="VirtualBox_Kali_30_09_2026_01_33_13" src="https://github.com/user-attachments/assets/e8680304-0918-47be-903d-762a89d74b78" />
 
 ## Lähteet:
 Chatgpt, Kielimalli GPT-6 Astra
