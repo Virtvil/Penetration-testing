@@ -90,7 +90,7 @@ Komento: "go install github.com/ffuf/ffuf/v2@latest" ei tee yhtään mitään, k
 
 Neuvojen avuilla minulle selvisi että ffuf kyllä asentuu laitteelle, mutta tämän polku on sotkussa. Neuvon avulla pääsin seuraavaan komentoketjuun:
 ```
-go install github.com/ffuf/ffuf/v2@v2.3.0
+go install github.com/ffuf/ffuf/v2@latest
 echo 'export PATH="$PATH:$(go env GOPATH)/bin"' >> ~/.zshrc
 source ~/.zshrc
 which ffuf
@@ -135,7 +135,14 @@ Seuraavaksi ryhdyin suodattamaan aikaisemmin saadusta tulosteestamme pois kaikki
 
 <img width="770" height="508" alt="VirtualBox_Kali_30_09_2026_00_32_05" src="https://github.com/user-attachments/assets/5bde2d9c-8ce1-4eb4-94d5-17a02a6e0961" />
 
+Voisimme ottaa tilanteessa myös käyttöömme ```-ac``` komennon lisän (auto calibration), joka rajaa pois ns. "roskavastaukset". 
+
 ## c3) Recursion
+Selvittääkseni aikaisempien suodatettujen kansioiden sisältöä pystyin kääntymään ```-recursion``` ja ```recursion-depth``` komentojen puoleen. ```-recursion``` komennolla kutsumme komentoamme käyttämään rekursiivista hakua, joka alkaa katsomaan mahdollisia polkuja haussamme. ```recursion-depth``` komennolla taas pystymme rajoittamaan kuinka syvälle hakuja teemme.
+
+Syötin komentoriville komennon /usr/local/bin/ffuf -w content.txt -u https://ffuf.io.fi/FUZZ -recursion -recursion-depth 1 -ac. Tässä komennossa -recursion käskee ohjelmaa aloittamaan sanalistan läpikäymisen automaattisesti alusta jokaisen löydetyn uuden kansion kohdalla. Lisäsin mukaan vivun -recursion-depth 1, joka rajoittaa kansion sisään sukeltamisen vain yhden tason syvyyteen jottei skannaus karkaa loputtomiin alikansioihin.
+
+Tulosteesta huomasin, että ohjelma lisäsi löytämänsä hakemistot työjonoon (esim. Adding a new job to the queue) ja alkoi skannata niitä vuorotellen. Tämän avulla sain esiin syvemmälle piilotettuja tiedostoja, joita pelkkä etusivun skannaus ei olisi ikinä löytänyt. Tuloksista paljastui muun muassa /backup/-kansion sisältä tietokannan kopio db.sql.bak, sekä muiden kansioiden sisältä uusia polkuja kuten v2, 2024, 2025 ja 2026.
 ## c4) Virtual hosts
 ## c9) The login you cannot replay (Has preflight! Has CSRF token!)
 
