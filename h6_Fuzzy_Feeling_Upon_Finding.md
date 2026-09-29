@@ -82,11 +82,13 @@ Yritin tämän jälkeen toistaa aiemmat askeleet lataamalla ja asentamalla komen
 
 Taistelin tämän kanssa useamman tuntia, luovutin ja kysyin apua chatgpt kielimallilta GPT-6 Astra seuraavalla promptilla:
 
+```
 "Yritän asentaa virtuaalikoneelleni korkeakoulun tehtävää varten ffuf-ohjelmaa. Kone on Kali Linux pohjainen ja yritän käyttää golang-avulla ohjelman simppeliä asennusta, mutta ohjelman molemmat annetuista asennuskomennoista ei toimi.
 
 Komento: "go install github.com/ffuf/ffuf/v2@latest" ei tee yhtään mitään, kun taas komento: git "clone https://github.com/ffuf/ffuf ; cd ffuf ; go get ; go build" vain lataa repositorion minulle. Yrittäessäni tarkistaa versiota Kali-koneeni ilmoittaa että ffuf ei ole asennettuna, haluanko asentaa sen? Ongelmana on, että tarvitsen githubin kautta ladattavan v2.3.0.-version ja sudo install ffuf antaa minulle 2.1.0.-version."
+```
 
-Neuvojen avuilla pääsin seuraavaan komentoketjuun:
+Neuvojen avuilla minulle selvisi että ffuf kyllä asentuu laitteelle, mutta tämän polku on sotkussa. Neuvon avulla pääsin seuraavaan komentoketjuun:
 ```
 go install github.com/ffuf/ffuf/v2@v2.3.0
 echo 'export PATH="$PATH:$(go env GOPATH)/bin"' >> ~/.zshrc
@@ -113,14 +115,33 @@ ffuf -V
 
 <img width="525" height="522" alt="VirtualBox_Kali_30_09_2026_00_13_05" src="https://github.com/user-attachments/assets/448a1ff5-1689-4f64-bdfb-0326240693ef" />
 
+Komentoketju lataa uusimman version ffufista, purkaa sen, siirtää sen sisällön bin-hakemistoon ja saa tämän polun näkymään oikein.
 
 ## c1) Content discovery (Vaultline https://ffuf.io.fi/play tehtävät on numeroitu näin, käytetään tässä samoja.).
+Seuraavaksi pääsin vihdoin tehtävien pariin. Tarkoituksena oli ladata Kali-koneelle talteen demoa varten luodut wordlistit, eli ffufin hakema sisältö, sekä sanakirjat salasanoille joita ffuf käyttäisi myöhemmin. Wordlistis ja sanakirjat latautuivat komennoilla: 
+```
+curl -O https://ffuf.io.fi/wordlists/content.txt 
+curl -O https://ffuf.io.fi/wordlists/passwords.txt
+```
+
+<img width="725" height="191" alt="VirtualBox_Kali_30_09_2026_00_24_45" src="https://github.com/user-attachments/assets/cfd5a418-73e1-4228-97e8-ac73df01b89c" />
+
+Nyt pääsimme vihdoin kohdesivuston kimppuun komennolla ```ffuf -w content.txt -u https://ffuf.io.fi/FUZZ```!
+
+<img width="804" height="608" alt="VirtualBox_Kali_30_09_2026_00_26_31" src="https://github.com/user-attachments/assets/5c1f9e1b-36df-4775-a00b-322b62d1195b" />
+
 ## c2) The interesting non-200
+Seuraavaksi ryhdyin suodattamaan aikaisemmin saadusta tulosteestamme pois kaikki tulosteet jotka eivät olleet statuskoodi 200. Tehtävässä oli tarkoituksena käyttää komennossa funktioita ```-mc all``` sekä ```fc```. Ffuf -h komennon avulla pystymme näkemään, että ```-mc all``` viittaa HTTP statuskoodeihin kun taas ```-fc``` filtteröi tuloksia. Komennoksemme muodostuukin siis ```ffuf -w content.txt -u https://ffuf.io.fi/FUZZ -mc all -fc 200```
+
+<img width="770" height="508" alt="VirtualBox_Kali_30_09_2026_00_32_05" src="https://github.com/user-attachments/assets/5bde2d9c-8ce1-4eb4-94d5-17a02a6e0961" />
+
 ## c3) Recursion
 ## c4) Virtual hosts
 ## c9) The login you cannot replay (Has preflight! Has CSRF token!)
 
 ## Lähteet:
+Chatgpt, Kielimalli GPT-6 Astra
+
 Hoikkala, 2026, Fuzzing with Fuff, Luettavissa: https://terokarvinen.com/tunkeutumistestaus/hoikkala-2026-fuzzing-with-ffuf.pdf Luettu 27.9.2026
 
 Hoikkala, 2026, ffuf README.md, Luettavissa: https://github.com/ffuf/ffuf/blob/master/README.md) Luettu 29.9.26
