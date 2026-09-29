@@ -67,6 +67,19 @@ Oikein! Kokeillaan taas komentoa ```git clone https://github.com/ffuf/ffuf ; cd 
 
 Go-komento ei näytä asentavan ffufia...
 
+Tässä vaiheessa päätin putsata kaikki aiemmat asennukseni komennoilla:
+```
+sudo apt remove --purge ffuf -y
+sudo rm -f /usr/local/bin/ffuf
+sudo rm -f /usr/bin/ffuf
+rm -f ~/go/bin/ffuf
+rm -rf ~/ffuf
+go clean -modcache
+hash -r
+```
+
+Yritin tämän jälkeen toistaa aiemmat askeleet lataamalla ja asentamalla komennolla ```git clone https://github.com/ffuf/ffuf ; cd ffuf ; go get ; go build```, sekä komennolla ```go install github.com/ffuf/ffuf/v2@latest```, mutta molemmat komennot vain latasivat github repositorion minulle, eivätkä asentaneet tätä.
+
 ## c1) Content discovery (Vaultline https://ffuf.io.fi/play tehtävät on numeroitu näin, käytetään tässä samoja.).
 ## c2) The interesting non-200
 ## c3) Recursion
