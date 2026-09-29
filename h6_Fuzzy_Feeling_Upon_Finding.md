@@ -26,22 +26,32 @@ Vasteaika -mt / -ft
 
 Automaattinen kalibrointi käytettävissä: -ac
 ```
-## a) Fuzzzz. Ratkaise dirfuz-1 artikkelista Karvinen 2023: Find Hidden Web Directories - Fuzz URLs with ffuf.
-## b) Fuff me. Asenna FuffMe-harjoitusmaali. Karvinen 2023: Fuffme - Install Web Fuzzing Target on Debian
-### Ffufme harjoitukset - kaikki paitsi ei "Content Discovery - Pipes".
-## c) Basic Content Discovery
-    
-## d) Content Discovery With Recursion
 
-## e) Content Discovery With File Extensions
+## a) Tallenna itsellesi kopio säännöistä. Kirjoita omin sanoin,
 
-## f) No 404 Status
-
-## g) Param Mining
-    
-## h) Rate Limited
-
-## i) Subdomains - Virtual Host Enumeration
+### Scope. Mikä on kohde?
+https://ffuf.io.fi/play on kohdekone fuzzing-testaukselle. Mikään kohteella ei ole aitoa eikä haurasta, joten se soveltuu täydellisesti fuffin testaukseen.
+### Rules of engagement. Mitä sille saa tehdä, eli mitä tai millaisia menetelmiä saa käyttää?
+Kohteesta on tarkoitus fuffin avulla löytää seuraavat kymmenen asiaa, jotka kattavat työkalun toiminnot:
+- Sanastot ja avainsanan sijoittaminen, 
+- Täsmäytys ja suodatus
+- Kalibrointi
+- Rekursio
+- Virtuaaliisännät
+- Parametrit
+- Raa’at pyynnöt
+- Sanaston lukeminen vakiosyötteestä (stdin) sekä pyynnöt, jotka on muodostettava aiemman vastauksen perusteella.
+### Mihin oikeutesi tehdä tietoturvatestausta tähän kohteeseen perustuu?
+Sivusto kertoo kyseessä olevan FUZZING DEMO TARGET. Sivusto myös erikseen listaa tehtäviä joita suorittaa sivustolla käyttäen fuzzausta.
+Palvelun ylläpitäjä on itse asettanut kyseisen palvelimen fuzzauksen harjoittelukohteeksi ja julkaissut siihen liittyvät säännöt sekä tehtävät.
+### Riskit ja mitigointi. Tuo palvelin on Internetissä. Tunnista lyhyesti riskit ja niiden mitigointi ennen käytännön harjoittelua.
+Verkkosivu on julkinen ja siihen yhdistetään avoimessa verkossa. On siis hyvä varmistaa kohteen olevan oikea ennen harjoituksen alkua, ettei tutkintamme yllä luvallisen kohteen ulkopuolelle. On hyvä myös ymmärtää useamman oppilaan tekevän samoja tehtäviä, joten lähettämiä pyyntöjämme on hyvä rajoittaa.
+## b) Asenna ffuf versio, joka tukee aivan uutta preflight-ominaisuutta.
+## c1) Content discovery (Vaultline https://ffuf.io.fi/play tehtävät on numeroitu näin, käytetään tässä samoja.).
+## c2) The interesting non-200
+## c3) Recursion
+## c4) Virtual hosts
+## c9) The login you cannot replay (Has preflight! Has CSRF token!)
 
 ## Lähteet:
 Hoikkala, 2026, Fuzzing with Fuff, Luettavissa: https://terokarvinen.com/tunkeutumistestaus/hoikkala-2026-fuzzing-with-ffuf.pdf Luettu 27.9.2026
