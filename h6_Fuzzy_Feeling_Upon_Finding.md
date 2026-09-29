@@ -162,6 +162,8 @@ ffuf -w content.txt -u https://ffuf.io.fi/FUZZ -H "Host: FUZZ.ffuf.io.fi" -fw 13
 <img width="785" height="661" alt="VirtualBox_Kali_30_09_2026_01_21_07" src="https://github.com/user-attachments/assets/6f755b9f-b220-424c-875a-dfd4472fcc22" />
 
 Näemme, että saamamme tulos on nyt huomattavasti pienempi! Mutta ei kuitenkaan kolmea? Valitettavasti en kyseisessä tehtävässä päässyt pidemmälle...
+
+Olettaisin ainakin admin-olevan yksi virtual host?
 ## c9) The login you cannot replay (Has preflight! Has CSRF token!)
 Lopuksi tutustuin Ffufin uuteen _preflight_-toimintoon! Aloitin tarkistamalla ominaisuuden toiminnan komennolla ```ffuf -h | grep -c preflight```
 
@@ -188,6 +190,11 @@ ffuf -w passwords.txt -u https://ffuf.io.fi/login -X POST \
 
 <img width="809" height="722" alt="VirtualBox_Kali_30_09_2026_01_33_13" src="https://github.com/user-attachments/assets/e8680304-0918-47be-903d-762a89d74b78" />
 
+Löysimme salasanan! Kokeillaan toimiiko se sivustolla.
+
+<img width="1352" height="770" alt="Näyttökuva 2026-09-30 014714" src="https://github.com/user-attachments/assets/573f4030-f035-4a26-938f-84a29b21ebfc" />
+
+Ja sisällä ollaan!
 ## Lähteet:
 Chatgpt, Kielimalli GPT-6 Astra
 
