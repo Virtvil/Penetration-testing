@@ -130,19 +130,24 @@ Nyt pääsimme vihdoin kohdesivuston kimppuun komennolla ```ffuf -w content.txt 
 
 <img width="804" height="608" alt="VirtualBox_Kali_30_09_2026_00_26_31" src="https://github.com/user-attachments/assets/5c1f9e1b-36df-4775-a00b-322b62d1195b" />
 
+Lisäämällä komentoon ```-ac```, pystymme myös rajaamaan pois ns. "roskavastaukset". 
+
+<img width="766" height="622" alt="VirtualBox_Kali_30_09_2026_00_58_55" src="https://github.com/user-attachments/assets/41850c12-d996-4f1b-918e-0f43f4c32409" />
+
 ## c2) The interesting non-200
 Seuraavaksi ryhdyin suodattamaan aikaisemmin saadusta tulosteestamme pois kaikki tulosteet jotka eivät olleet statuskoodi 200. Tehtävässä oli tarkoituksena käyttää komennossa funktioita ```-mc all``` sekä ```fc```. Ffuf -h komennon avulla pystymme näkemään, että ```-mc all``` viittaa HTTP statuskoodeihin kun taas ```-fc``` filtteröi tuloksia. Komennoksemme muodostuukin siis ```ffuf -w content.txt -u https://ffuf.io.fi/FUZZ -mc all -fc 200```
 
 <img width="770" height="508" alt="VirtualBox_Kali_30_09_2026_00_32_05" src="https://github.com/user-attachments/assets/5bde2d9c-8ce1-4eb4-94d5-17a02a6e0961" />
 
-Voisimme ottaa tilanteessa myös käyttöömme ```-ac``` komennon lisän (auto calibration), joka rajaa pois ns. "roskavastaukset". 
-
+Tehtävässä toimis kyllä myös aiemman tehtävän ```-ac```-lisäke.
 ## c3) Recursion
 Selvittääkseni aikaisempien suodatettujen kansioiden sisältöä pystyin kääntymään ```-recursion``` ja ```recursion-depth``` komentojen puoleen. ```-recursion``` komennolla kutsumme komentoamme käyttämään rekursiivista hakua, joka alkaa katsomaan mahdollisia polkuja haussamme. ```recursion-depth``` komennolla taas pystymme rajoittamaan kuinka syvälle hakuja teemme.
 
-Syötin komentoriville komennon /usr/local/bin/ffuf -w content.txt -u https://ffuf.io.fi/FUZZ -recursion -recursion-depth 1 -ac. Tässä komennossa -recursion käskee ohjelmaa aloittamaan sanalistan läpikäymisen automaattisesti alusta jokaisen löydetyn uuden kansion kohdalla. Lisäsin mukaan vivun -recursion-depth 1, joka rajoittaa kansion sisään sukeltamisen vain yhden tason syvyyteen jottei skannaus karkaa loputtomiin alikansioihin.
+Käytin polkujen tutkimiseen komentoa ```ffuf -w content.txt -u https://ffuf.io.fi/FUZZ -recursion -ac -recursion-depth 2```, joka hakee osuman jälkeen polkuja, lopettaen haun 2 polun jälkeen jotta tämä ei karkaisi aivan käsistä. 
 
-Tulosteesta huomasin, että ohjelma lisäsi löytämänsä hakemistot työjonoon (esim. Adding a new job to the queue) ja alkoi skannata niitä vuorotellen. Tämän avulla sain esiin syvemmälle piilotettuja tiedostoja, joita pelkkä etusivun skannaus ei olisi ikinä löytänyt. Tuloksista paljastui muun muassa /backup/-kansion sisältä tietokannan kopio db.sql.bak, sekä muiden kansioiden sisältä uusia polkuja kuten v2, 2024, 2025 ja 2026.
+<img width="798" height="701" alt="VirtualBox_Kali_30_09_2026_01_03_47" src="https://github.com/user-attachments/assets/4bd0e077-22a5-43a4-afa5-9ee9809b1250" />
+
+Tulosteesta näemme komennon lisäävän hakusanojen perusteella löydetyt hakemistot työjonoon (Adding a new job to the queue) ja ryhtyy käymään näitä läpi antamiemme parametrien avulla. Tällä tavalla pysymme löytämään toistensa alle piilotettuja tiedostoja, joita normaali skannaus ei löydä.
 ## c4) Virtual hosts
 ## c9) The login you cannot replay (Has preflight! Has CSRF token!)
 
