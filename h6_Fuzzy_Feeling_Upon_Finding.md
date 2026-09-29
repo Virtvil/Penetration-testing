@@ -193,3 +193,5 @@ Chatgpt, Kielimalli GPT-6 Astra
 Hoikkala, 2026, Fuzzing with Fuff, Luettavissa: https://terokarvinen.com/tunkeutumistestaus/hoikkala-2026-fuzzing-with-ffuf.pdf Luettu 27.9.2026
 
 Hoikkala, 2026, ffuf README.md, Luettavissa: https://github.com/ffuf/ffuf/blob/master/README.md) Luettu 29.9.26
+
+Vaultline Oy, 2026, Vaultline – fuzzing demo target for the ffuf talk. Luettavissa: https://ffuf.io.fi/play Luettu: 29.9.2026.
